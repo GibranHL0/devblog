@@ -6,6 +6,7 @@ import (
 
 	"github.com/GibranHL0/devblog/configuration"
 	"github.com/GibranHL0/devblog/connection"
+	"github.com/GibranHL0/devblog/server"
 )
 
 func init() {
@@ -14,6 +15,9 @@ func init() {
 
 	db := connection.StartMongo(*config)
 	log.Println("Connected to: ", db.Mongo.Name())
+
+	mux := server.StartMux(*config)
+	log.Println("Server up! 🚀 ", mux)
 }
 
 func main() {

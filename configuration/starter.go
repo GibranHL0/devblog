@@ -11,11 +11,12 @@ import (
 )
 
 type Configuration struct {
-	Uri         string
-	Database    string
-	Collection  string
-	WaitingTime time.Duration
-	PoolSize    uint64
+	Uri            string
+	Database       string
+	Collection     string
+	WaitingTime    time.Duration
+	PoolSize       uint64
+	FileServerPath string
 }
 
 func getEnv(env string) string {
@@ -43,12 +44,14 @@ func Get(envFilePath string) *Configuration {
 	uri := getEnv("MONGO_URI")
 	db := getEnv("DB")
 	collection := getEnv("COLLECTION")
+	fileServerPath := getEnv("FILESERVER")
 
 	return &Configuration{
-		Uri: uri,
-		Database: db,
-		Collection: collection,
-		WaitingTime: time.Duration(timing*int64(time.Second)),
-		PoolSize: size,
+		Uri:            uri,
+		Database:       db,
+		Collection:     collection,
+		WaitingTime:    time.Duration(timing * int64(time.Second)),
+		PoolSize:       size,
+		FileServerPath: fileServerPath,
 	}
 }
