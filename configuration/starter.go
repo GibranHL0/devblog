@@ -17,6 +17,7 @@ type Configuration struct {
 	WaitingTime    time.Duration
 	PoolSize       uint64
 	FileServerPath string
+	TemplatesPath  string
 }
 
 func getEnv(env string) string {
@@ -45,6 +46,7 @@ func Get(envFilePath string) *Configuration {
 	db := getEnv("DB")
 	collection := getEnv("COLLECTION")
 	fileServerPath := getEnv("FILESERVER")
+	templatesPath := getEnv("TEMPLATESPATH")
 
 	return &Configuration{
 		Uri:            uri,
@@ -53,5 +55,6 @@ func Get(envFilePath string) *Configuration {
 		WaitingTime:    time.Duration(timing * int64(time.Second)),
 		PoolSize:       size,
 		FileServerPath: fileServerPath,
+		TemplatesPath:  templatesPath,
 	}
 }
