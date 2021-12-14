@@ -10,7 +10,7 @@ import (
 )
 
 type Database struct {
-	Mongo *mongo.Database
+	Mongo *mongo.Collection
 }
 
 func checkConnection(client *mongo.Client, ctx context.Context) error {
@@ -32,6 +32,6 @@ func StartMongo(config configuration.Configuration) *Database {
 	errorhandler.CheckFatal(err)
 
 	return &Database{
-		Mongo: client.Database(config.Database),
+		Mongo: client.Database(config.Database).Collection(config.Collection),
 	}
 }
