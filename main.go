@@ -18,7 +18,7 @@ func init() {
 	log.Println("Configuration generated: ", config.Database)
 
 	db := connection.StartMongo(*config)
-	log.Println("Connected to: ", db.Mongo.Name())
+	log.Println("Connected to: ", db.Collection.Name())
 
 	templates := templates.Load(*config)
 	log.Println("Templates loaded", templates)
