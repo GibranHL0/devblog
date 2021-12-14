@@ -7,6 +7,7 @@ import (
 	"github.com/GibranHL0/devblog/configuration"
 	"github.com/GibranHL0/devblog/connection"
 	"github.com/GibranHL0/devblog/server"
+	"github.com/GibranHL0/devblog/templates"
 )
 
 func init() {
@@ -15,6 +16,9 @@ func init() {
 
 	db := connection.StartMongo(*config)
 	log.Println("Connected to: ", db.Mongo.Name())
+
+	templates := templates.Load(*config)
+	log.Println("Templates loaded", templates)
 
 	mux := server.StartMux(*config)
 	log.Println("Server up! 🚀 ", mux)
