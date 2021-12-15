@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Junior Dev Blog</title>
+    <link href="/static/css/contact/contact.css" rel="stylesheet">
+    <link href="/static/css/main/header.css" rel="stylesheet">
+    <link href="/static/css/main/footer.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</head>
+<body>
+    <div class="Header">
+        {{template "header"}}
+    </div>
+    <div class="Contact">
+        <h1 class="Title">Want to leave a message?</h1>
+        <div class="Social-links">
+            <div class="Twitter">
+                <a 
+                class="twitter-timeline" 
+                data-width="500" 
+                data-height="500" 
+                data-theme="dark" 
+                href="https://twitter.com/gibranhl?ref_src=twsrc%5Etfw">
+                    Tweets by gibranhl
+                </a>
+            </div>
+        </div>
+        <div class="mailto">
+            <a href="mailto:gibranhl2@gmail.com?subject=Hey, I checked out your blog!">
+                <button class="Email-button">Email Me</button>
+            </a>
+        </div>
+    </div>
+    <div class="Footer">
+        {{template "footer"}}
+    </div>
+</body>
+</html>

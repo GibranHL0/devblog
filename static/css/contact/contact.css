@@ -1,0 +1,95 @@
+body {
+    background-color: #EEEEEE;
+    color: #393E46;
+    margin: 0%;
+}
+
+.Contact {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.Contact h1 {
+    font-family: 'Montserrat';
+}
+
+.Contact p {
+    font-family: 'Inconsolata';
+}
+
+.Title {
+    text-align: center;
+    color: #393E46;
+}
+
+.mailto {
+    text-align: center;
+}
+
+.Email-button {
+    color: #393E46;
+    background-color: #EEEEEE;
+    padding: 15px;
+    border-radius: 15pt;
+    border: solid;
+    border-color: #222831;
+}
+
+.Email-button:hover {
+    color: #EEEEEE;
+    background-color: #D65A31;
+    border: none;
+}
+
+.Social-links {
+    display: flex;
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+}
+
+@media screen and (min-width: 601px) {
+    .Contact {
+        margin-top: 140px;
+    }
+    
+    .Title {
+        font-size: 28pt;
+    }
+
+    .mailto {
+        margin-top: 3%;
+        margin-bottom: 4%;
+    }
+
+    .Email-button {
+        font-size: 18pt;
+    }
+
+    .Twitter {
+        margin-left: 5%;
+    }
+
+    .LowNav {
+        position: absolute;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .Contact {
+        margin-top: 70px;
+    }
+    
+    .Title {
+        font-size: 20pt;
+    }
+
+    .mailto {
+        margin-top: 8%;
+        margin-bottom: 8%;
+    }
+
+    .Email-button {
+        font-size: 12pt;
+    }
+}

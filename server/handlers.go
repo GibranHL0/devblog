@@ -17,3 +17,14 @@ func aboutHandler(templates *template.Template) http.HandlerFunc {
 		}
 	}
 }
+
+func contactHandler(templates *template.Template) http.HandlerFunc {
+	return func(rw http.ResponseWriter, r *http.Request) {
+		err := templates.ExecuteTemplate(rw, "contact.html", "")
+		if err != nil {
+			errorhandler.ReportError(err, "contact.html was not executed.")
+			rw.WriteHeader(http.StatusInternalServerError)
+			rw.Write([]byte("Something bad happened!"))
+		}
+	}
+}
