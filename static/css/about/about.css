@@ -1,0 +1,95 @@
+body {
+    background-color: #EEEEEE;
+    color: #393E46;
+    margin: 0%;
+}
+
+.About h2 {
+    font-family: 'Montserrat';
+}
+
+.About h3 {
+    font-family: 'Montserrat';
+}
+
+.About p {
+    font-family: "Inconsolata";
+}
+
+.About-right {
+    margin-bottom: 12%;
+}
+
+.Subtitle {
+    margin-bottom: 12%;
+}
+
+.Text {
+    text-align: justify;
+}
+
+.About-left {
+    text-align: center;
+}
+
+.Picture {
+    width: 65%;
+    border-radius: 15pt;
+}
+
+@media screen and (min-width: 601px) {
+    .About {
+        margin-top: 156px;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 4%;
+    }
+
+    .About-column {
+        float: left;
+        width: 50%;
+    }
+
+    .About-row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .Title {
+        font-size: 32pt;
+    }
+
+    .Subtitle {
+        font-size: 16pt;
+        margin-bottom: 12%;
+    }
+
+    .Text {
+        font-size: 20pt;
+        margin-bottom: 6%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .About {
+        margin-top: 80px;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-bottom: 4%;
+    }
+
+    .Title {
+        font-size: 22pt;
+        text-align: center;
+    }
+
+    .Subtitle {
+        font-size: 10pt;
+    }
+
+    .Text {
+        font-size: 14pt;
+        margin-bottom: 8%;
+    }
+}

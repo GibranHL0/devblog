@@ -1,0 +1,69 @@
+.Header {
+     font-family: 'Montserrat';
+}
+
+.TopNav {
+     background-color: #D65A31;
+     width: 100%;
+     justify-content: center;
+     position: absolute;
+     top: 0;
+}
+
+.TopNavElements {
+     width: 90%;
+     height: 100%;
+     align-items: center;
+     display: inline-flex;
+     margin-left: 3%;
+}
+
+.TopNavLinks {
+     margin-left: 5%;
+}
+
+.TopNav a {
+     float: left;
+     color: #EEEEEE;
+     text-align: center;
+     padding: 14px 16px;
+     text-decoration: none;
+}
+
+.TopNav a:hover {
+     font-weight: bolder;
+}
+
+.TopNav a.active {
+     color: #EEEEEE;
+     height: auto;
+     font-weight: bolder;
+}
+
+@media screen and (min-width: 601px) {
+    .TopNav {
+         height: 100px;
+    }
+    
+    .TopNav a {
+         font-size: 14pt;
+    }
+    
+    .TopNav a.active {
+         font-size: 31pt;
+    }
+}
+
+@media screen and (max-width: 600px) {
+     .TopNav {
+          height: 60px;
+     }
+
+     .TopNav a {
+          font-size: 5pt;
+     }
+     
+     .TopNav a.active {
+          font-size: 9pt;
+     }
+}

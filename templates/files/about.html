@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Junior Dev Blog</title>
+    <link href="/static/css/about/about.css" rel="stylesheet">
+    <link href="/static/css/main/header.css" rel="stylesheet">
+    <link href="/static/css/main/footer.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+</head>
+<body>
+    <div class="Header">
+        {{template "header"}}
+    </div>
+    <div class="About">
+        <div class="About-row">
+            <div class="About-column">
+                <div class="About-right">
+                    <h2 class="Title">
+                        Sharing my experiences as a Junior Dev.
+                    </h2>
+                    <h3 class="Subtitle">
+                        Although it may change in few years, hopefully.
+                    </h3>
+                    <p class="Text">
+                        I always received help from the tech community, and I believe the
+                        best way to give all back is to share my knowledge. My blog shares
+                        my experiences learning all the tools and technologies that excites me
+                        the most.
+                    </p>
+                    <p class="Text">
+                        I hope this blog help you to solve a little bug, or inspire you in some
+                        sort.
+                    </p>
+                    <p class="Text">
+                        Thanks everyone!
+                    </p>
+                </div>
+            </div>
+            <div class="About-column">
+                <div class="About-left">
+                    <img src="/static/Pictures/About.jpg" class="Picture">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Footer">
+        {{template "footer"}}
+    </div>
+</body>
+</html>
