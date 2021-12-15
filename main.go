@@ -17,13 +17,13 @@ func init() {
 	config := configuration.Get(".env")
 	log.Println("Configuration generated: ", config.Database)
 
-	db := connection.StartMongo(*config)
+	db := connection.StartMongo(config)
 	log.Println("Connected to: ", db.Collection.Name())
 
-	templates := templates.Load(*config)
+	templates := templates.Load(config)
 	log.Println("Templates loaded", templates)
 
-	mux := server.StartMux(*config)
+	mux := server.StartMux(config, templates)
 	log.Println("Server up! 🚀 ", mux)
 
 	blog = app.Factory(config, db, templates, mux)

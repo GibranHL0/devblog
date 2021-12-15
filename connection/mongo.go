@@ -19,7 +19,7 @@ func checkConnection(client *mongo.Client, ctx context.Context) error {
 	return client.Ping(ctx, nil)
 }
 
-func StartMongo(config configuration.Configuration) *Database {
+func StartMongo(config *configuration.Configuration) *Database {
 	ctx, cancel := context.WithTimeout(context.Background(), config.WaitingTime)
 	defer cancel()
 
