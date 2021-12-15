@@ -18,6 +18,7 @@ type Configuration struct {
 	PoolSize       uint64
 	FileServerPath string
 	TemplatesPath  string
+	Port           string
 }
 
 func getEnv(env string) string {
@@ -47,6 +48,7 @@ func Get(envFilePath string) *Configuration {
 	collection := getEnv("COLLECTION")
 	fileServerPath := getEnv("FILESERVER")
 	templatesPath := getEnv("TEMPLATESPATH")
+	port := getEnv("PORT")
 
 	return &Configuration{
 		Uri:            uri,
@@ -56,5 +58,6 @@ func Get(envFilePath string) *Configuration {
 		PoolSize:       size,
 		FileServerPath: fileServerPath,
 		TemplatesPath:  templatesPath,
+		Port:           port,
 	}
 }
