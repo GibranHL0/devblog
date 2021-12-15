@@ -26,12 +26,7 @@ func init() {
 	mux := server.StartMux(*config)
 	log.Println("Server up! 🚀 ", mux)
 
-	blog = app.App{
-		Config: config,
-		Db: db,
-		Templates: templates,
-		Server: mux,
-	}
+	blog = app.Factory(config, db, templates, mux)
 
 	log.Println("App is up and running! 🔥", blog)
 }

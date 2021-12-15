@@ -14,3 +14,17 @@ type App struct {
 	Templates *template.Template
 	Server    *http.ServeMux
 }
+
+func Factory(
+	config *configuration.Configuration,
+	db *connection.Database,
+	templates *template.Template,
+	server *http.ServeMux) App {
+
+	return App{
+		Config: config,
+		Db: db,
+		Templates: templates,
+		Server: server,
+	}
+}
