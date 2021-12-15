@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Junior Dev Blog</title>
+    <link href="/static/css/newsletter/newsletter.css" rel="stylesheet">
+    <link href="/static/css/main/header.css" rel="stylesheet">
+    <link href="/static/css/main/footer.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+</head>
+<body>
+    <div class="Header">
+        {{template "header"}}
+    </div>
+    <div class="Newsletter">
+        <div class="News-container">
+            <form action="">
+              <h1 class="Title">Join Junior Dev Newsletter</h1>
+              <p class="Description">Get the latest of my dev journey, and hopefully leave the Junior steps soon.</p>
+              <div class="Email-box">
+                <span class="Email-icon">
+                    <i class="fas fa-envelope"></i>
+                </span>
+                <input class="Tbox" type="email" name="" value="" placeholder="Enter your email">
+                <button class="Btn" type="button" name="button">Subscribe</button>
+              </div>
+              <p class="Disclosure">Promise to not spam you!</p>
+            </form>
+          </div>
+    </div>
+    <div class="Footer">
+        {{template "footer"}}
+    </div>
+</body>
+</html>

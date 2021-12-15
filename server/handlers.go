@@ -16,3 +16,9 @@ func contactHandler(templates *template.Template) http.HandlerFunc {
 		executeTemplate(templates, "contact.html", nil, rw)
 	}
 }
+
+func newsletterHandler(templates *template.Template) http.HandlerFunc{
+	return func(rw http.ResponseWriter, r *http.Request) {
+		executeTemplate(templates, "newsletter.html", nil, rw)
+	}
+}

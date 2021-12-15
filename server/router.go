@@ -18,6 +18,7 @@ func initializeHandlers(
 	mux.Handle("/static/", http.StripPrefix("/static", fileServer))
 	mux.HandleFunc("/about", aboutHandler(templates))
 	mux.HandleFunc("/contact", contactHandler(templates))
+	mux.HandleFunc("/suscribe", newsletterHandler(templates))
 }
 
 func StartMux(
