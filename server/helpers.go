@@ -23,3 +23,8 @@ func executeTemplate(
 		rw.Write([]byte("Something bad happened!"))
 	}
 }
+
+func executeNotFound(rw http.ResponseWriter) {
+	rw.WriteHeader(http.StatusNotFound)
+	rw.Write([]byte("Content not found!, 404"))
+}
