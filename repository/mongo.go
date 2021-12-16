@@ -11,7 +11,7 @@ import (
 )
 
 type MongoRepository struct {
-	Db connection.Database
+	Db *connection.Database
 }
 
 func (mr *MongoRepository) GetArticle(id primitive.ObjectID) (
@@ -34,6 +34,7 @@ func (mr *MongoRepository) GetHomeView(skip int64, limit int64) (
 	*mongo.Cursor, error) {
 
 	filter := bson.M{}
+	// sorting := bson.D{{"date", 1}}
 	ctx, cancel := context.WithTimeout(context.Background(), mr.Db.Timing)
 	defer cancel()
 
@@ -42,7 +43,6 @@ func (mr *MongoRepository) GetHomeView(skip int64, limit int64) (
 	findOptions := options.FindOptions{
 		Skip: &skip,
 		Limit: &limit,
-		Sort: bson.D{{"date", 1}},
 	}
 
 	cursor, err := articlesView.Find(
