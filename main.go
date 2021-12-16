@@ -24,7 +24,7 @@ func init() {
 	templates := templates.Load(config)
 	log.Println("Templates loaded", templates)
 
-	mux := server.StartMux(config, templates)
+	mux := server.StartMux(db, config, templates)
 	log.Println("Server up! 🚀 ", mux)
 
 	blog = app.Factory(config, db, templates, mux)
