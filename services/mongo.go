@@ -2,7 +2,9 @@ package services
 
 import (
 	"context"
+	"fmt"
 
+	"github.com/GibranHL0/devblog/errorhandler"
 	"github.com/GibranHL0/devblog/models"
 	"github.com/GibranHL0/devblog/repository"
 	"go.mongodb.org/mongo-driver/bson/primitive"
@@ -22,7 +24,8 @@ func GetArticle(
 	// Obtain the result from the database
 	result, err := mr.GetArticle(objectId)
 	if err != nil {
-		return err
+		info := fmt.Sprintf("%s article caused the error", id)
+		errorhandler.ReportError(err, info)
 	}
 
 	// Finally, Decode the result into the struct
