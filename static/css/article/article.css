@@ -1,0 +1,264 @@
+body {
+     background-color: #EEEEEE;
+     color: #393E46;
+     margin: 0%;
+}
+
+li::before {
+     content: '🍊';
+     margin-left: -25px;
+}
+
+li {
+     font-style: italic;
+     margin-bottom: 3%;
+}
+
+.Article h1 {
+     font-family: 'Montserrat';
+}
+
+.Article h2 {
+     font-family: 'Montserrat';
+}
+
+.Article p {
+     font-family: 'Inconsolata';
+}
+
+.TitleSection {
+     text-align: center;
+     margin-bottom: 10%;
+}
+
+.ArticleInfo {
+     margin-bottom: 5%;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     width: 100%;
+     flex-wrap: nowrap;
+     justify-content: center;
+}
+
+.ArticleAuthor {
+     margin-right: 3%;
+     font-weight: bolder;
+     font-style: italic;
+}
+
+.ArticleAuthorPicture {
+     margin-right: 2%;
+     height: auto;
+     border-radius: 50%;
+}
+
+.IntroSection {
+     text-align: justify;
+     margin-bottom: 10%;
+}
+
+.IntroTitle {
+     margin-bottom: 4%;
+}
+
+.TextSection {
+     font-weight: 100;
+     text-align: justify;
+     margin-bottom: 10%;
+}
+
+.Section {
+     margin-bottom: 10%;
+}
+
+.TextSubtitle {
+     text-align: center;
+     margin-bottom: 5%;
+}
+
+.TextInfo {
+     margin-bottom: 5%;
+}
+
+.BulletPoints {
+     text-align: left;
+     margin-bottom: 5%;
+}
+
+.TextPictures {
+     border-radius: 25pt;
+     max-width: 100%;
+     height: auto;
+}
+
+.ConTitle {
+     text-align: center;
+}
+
+.ConText {
+     text-align: justify;
+}
+
+.FarewellSection {
+     margin-top: 10%;
+     text-align: justify;
+}
+
+.Tag {
+     color: #393E46;
+     background-color: #EEEEEE;
+     border: solid;
+     text-align: center;
+     cursor: pointer;
+     margin-right: 3%;
+     border-radius: 25pt;
+}
+
+.Tag:hover {
+     background-color: #D65A31;
+     color: #EEEEEE;
+}
+
+@media screen and (min-width: 601px) {
+     .Article {
+          margin-top: 150px;
+          margin-left: 25%;
+          margin-right: 25%;
+     }
+      
+     .ArticleTitle {
+          font-size: 45pt;
+          margin-top: 5%;
+     }
+      
+     .ArticleInfo {
+          font-size: 12pt;
+     }
+      
+     .ArticleAuthorPicture {
+          width: 50px;
+     }
+      
+     .IntroSection {
+          font-size: 18pt;
+     }
+     
+     .TextSubtitle {
+          font-size: 28pt;
+     }
+
+     .BulletPoints {
+          font-size: 16pt;
+     }
+      
+     .TextInfo {
+          font-size: 18pt;
+     }
+
+     .TextPictureSection {
+          text-align: center;
+     }
+      
+     .ConclusionSection {
+          margin-bottom: 10%;
+     }
+      
+     .ConTitle {
+          font-size: 28pt;
+     }
+      
+     .ConText {
+          font-size: 18pt;
+     }
+      
+     .FarewellSection {
+          margin-bottom: 5%;
+     }
+
+     .FareTitle {
+         font-size: 28pt;
+     }
+     
+     .FareText {
+         font-size: 18pt;
+     }
+
+     .Tags {
+          margin-bottom: 8%;
+          display: block;
+          direction: rtl;
+     }
+
+     .Tag {
+          font-size: 14pt;
+          padding: 10pt;
+     }
+}
+
+@media screen and (max-width: 600px) {
+     .Article {
+          margin-top: 110px;
+          margin-left: 15%;
+          margin-right: 15%;
+     }
+      
+     .ArticleTitle {
+          font-size: 20pt;
+          margin-top: 5%;
+     }
+      
+     .ArticleInfo {
+          font-size: 10pt;
+     }
+      
+     .ArticleAuthorPicture {
+          width: 25px;
+     }
+      
+     .IntroSection {
+          font-size: 12pt;
+     }
+      
+     .TextSubtitle {
+          font-size: 18pt;
+     }
+
+     .BulletPoints {
+          font-size: 10pt;
+     }
+      
+     .TextInfo {
+          font-size: 12pt;
+     }
+ 
+     .ConTitle {
+          font-size: 18pt;
+     }
+      
+     .ConText {
+          font-size: 12pt;
+     }
+      
+     .FarewellSection {
+          margin-bottom: 10%;
+     }
+ 
+     .FareTitle {
+          font-size: 18pt;
+     }
+      
+     .FareText {
+          font-size: 12pt;
+     }
+ 
+     .Tags {
+          margin-bottom: 10%;
+          text-align: center;
+     }
+ 
+     .Tag {
+          font-size: 8pt;
+          padding: 6pt;
+     }
+}

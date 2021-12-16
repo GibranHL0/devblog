@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Junior Dev Blog</title>
-    <link href="/static/CSS/Article/article.css" rel="stylesheet">
-    <link href="/static/CSS/Article/gist.css" rel="stylesheet">
-    <link href="/static/CSS/Main/header.css" rel="stylesheet">
-    <link href="/static/CSS/Main/footer.css" rel="stylesheet">
+    <link href="/static/css/article/article.css" rel="stylesheet">
+    <link href="/static/css/article/gist.css" rel="stylesheet">
+    <link href="/static/css/main/header.css" rel="stylesheet">
+    <link href="/static/css/main/footer.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
 </head>
@@ -31,66 +31,8 @@
                 </p>
             </div>
         </div>
-        <div class="IntroSection">
-            <h2 class="IntroTitle">
-                {{.Introduction.Title}}
-            </h2>
-            {{range .Introduction.Text}}
-                <p>
-                    {{.}}
-                </p>
-            {{end}}
-        </div>
-        <div class="TextSection">
-            {{range .Sections}}
-                <div class="Section">
-                    <h2 class="TextSubtitle">
-                        {{.Subtitle}}
-                    </h2>
-                    {{range .Paragraphs}}
-                        <p class="TextInfo">
-                            {{.Text}}
-                        </p>
-                        <ul class="BulletPoints">
-                            {{range .BulletPoints}}
-                            <li>
-                                {{.}}
-                            </li>
-                            {{end}}
-                        </ul>
-                        {{range .Code}}
-                            <div>
-                                <script src={{.}}></script>
-                            </div>
-                        {{end}}
-                        {{range .Pictures}}
-                            <div class="TextPictureSection">
-                                <img class="TextPictures" src={{.}}>
-                            </div>
-                        {{end}}
-                    {{end}}
-                </div>
-            {{end}}
-        </div>
-        <div class="ConclusionSection">
-            <h2 class="ConTitle">
-                {{.Conclusion.Title}}
-            </h2>
-            {{range .Conclusion.Text}}
-                <p class="ConText">
-                    {{.}}
-                </p>
-            {{end}}
-        </div>
-        <div class="FarewellSection">
-            <h2 class="FareTitle">
-                {{.Farewell.Title}}
-            </h2>
-            {{range .Farewell.Text}}
-                <p class="FareText">
-                    {{.}}
-                </p>
-            {{end}}
+        <div class="Body">
+            {{.Body}}
         </div>
         <div class="Tags">
             {{range .Tags}}
