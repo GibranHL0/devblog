@@ -4,16 +4,6 @@ body {
      margin: 0%;
 }
 
-li::before {
-     content: '🍊';
-     margin-left: -25px;
-}
-
-li {
-     font-style: italic;
-     margin-bottom: 3%;
-}
-
 .Article h1 {
      font-family: 'Montserrat';
 }
@@ -53,56 +43,54 @@ li {
      border-radius: 50%;
 }
 
-.IntroSection {
-     text-align: justify;
-     margin-bottom: 10%;
-}
-
-.IntroTitle {
-     margin-bottom: 4%;
-}
-
-.TextSection {
+.Content p {
      font-weight: 100;
      text-align: justify;
-     margin-bottom: 10%;
 }
 
-.Section {
-     margin-bottom: 10%;
-}
-
-.TextSubtitle {
+.Content h2 {
      text-align: center;
      margin-bottom: 5%;
+     margin-top: 10%;
 }
 
-.TextInfo {
-     margin-bottom: 5%;
+.Content greetings {
+     font-family: 'Montserrat';
+     font-weight: bold;
+     text-align: center;
+     margin-bottom: 10%;
 }
 
-.BulletPoints {
+.Content a {
+     padding: 3px;
+     font-weight: bold;
+     background-color: #D65A31;
+     color: #EEEEEE;
+}
+
+.Content ul {
+     list-style: none;
      text-align: left;
      margin-bottom: 5%;
+     margin-top: 5%;
 }
 
-.TextPictures {
+.Content li::before {
+     content: '➡';
+     margin-left: -30px;
+     margin-right: 10px;
+}
+
+.Content li {
+     margin-bottom: 3%;
+}
+
+.Content img {
+     margin-top: 5%;
+     margin-bottom: 5%;
      border-radius: 25pt;
      max-width: 100%;
      height: auto;
-}
-
-.ConTitle {
-     text-align: center;
-}
-
-.ConText {
-     text-align: justify;
-}
-
-.FarewellSection {
-     margin-top: 10%;
-     text-align: justify;
 }
 
 .Tag {
@@ -139,51 +127,28 @@ li {
      .ArticleAuthorPicture {
           width: 50px;
      }
-      
-     .IntroSection {
-          font-size: 18pt;
+
+     .Content h2 {
+          font-size: 26pt;
      }
      
-     .TextSubtitle {
-          font-size: 28pt;
+     .Content p {
+          font-size: 18pt;
      }
 
-     .BulletPoints {
+     .Content li {
           font-size: 16pt;
      }
-      
-     .TextInfo {
-          font-size: 18pt;
-     }
 
-     .TextPictureSection {
+     .Content .Picture {
+          width: 100%;
           text-align: center;
      }
-      
-     .ConclusionSection {
-          margin-bottom: 10%;
-     }
-      
-     .ConTitle {
+
+     .Content greetings {
           font-size: 28pt;
      }
-      
-     .ConText {
-          font-size: 18pt;
-     }
-      
-     .FarewellSection {
-          margin-bottom: 5%;
-     }
-
-     .FareTitle {
-         font-size: 28pt;
-     }
      
-     .FareText {
-         font-size: 18pt;
-     }
-
      .Tags {
           margin-bottom: 8%;
           display: block;
@@ -216,40 +181,33 @@ li {
           width: 25px;
      }
       
-     .IntroSection {
+     .Content h2 {
+          font-size: 18pt;
+     }
+     
+     .Content p {
           font-size: 12pt;
      }
-      
-     .TextSubtitle {
+
+     .Content li {
+          font-size: 10pt;
+     }
+
+     .Content .Picture {
+          width: 100%;
+          text-align: center;
+     }
+
+     .Content greetings {
           font-size: 18pt;
      }
 
-     .BulletPoints {
-          font-size: 10pt;
-     }
-      
-     .TextInfo {
-          font-size: 12pt;
-     }
- 
-     .ConTitle {
-          font-size: 18pt;
-     }
-      
-     .ConText {
-          font-size: 12pt;
-     }
-      
-     .FarewellSection {
-          margin-bottom: 10%;
-     }
- 
-     .FareTitle {
-          font-size: 18pt;
-     }
-      
-     .FareText {
-          font-size: 12pt;
+     .Content img {
+          margin-top: 5%;
+          margin-bottom: 5%;
+          border-radius: 5pt;
+          max-width: 100%;
+          height: auto;
      }
  
      .Tags {
