@@ -7,7 +7,7 @@ type Article struct {
 	Author string    `bson:"author"`
 	Date   time.Time `bson:"date"`
 	Tags   []string  `bson:"tags"`
-	Body   []byte    `bson:"article"`
+	Body   string    `bson:"article"`
 }
 
 type HomeView struct {
