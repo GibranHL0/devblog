@@ -1,8 +1,5 @@
-.Footer {
-    font-family: 'Montserrat';
-}
-
 .LowNav {
+    font-family: 'Montserrat';
     background-color: #222831;
     color: #EEEEEE;
     bottom: 0;
@@ -10,47 +7,42 @@
     width: 100%;
 }
 
-.LowNavElements {
+.LowNav .Elements {
     display: inline-flex;
     align-items: center;
     width: 100%;
     justify-content: flex-end;
 }
 
-.LowNavBrand {
+.LowNav .Brand {
     margin-right: 10%;
 }
 
-.LowNavLinks {
+.LowNav .Links {
     width: 20%;
 }
 
-.LowNavLinks img {
+.LowNav .Links img {
     height: 100%;
     margin-right: 5%;
 }
 
-.Twitter {
-    height: 90%;
-    margin-right: 5%;
-}
-
 @media screen and (min-width: 601px) {
-    .BrandName {
+    .LowNav .Brand .Name {
          font-size: 18pt;
     }
 
-    .LowNavLinks {
+    .LowNav .Links {
          height: 30px;
     }
 }
 
 @media screen and (max-width: 600px) {
-   .BrandName {
+   .LowNav .Brand .Name {
        font-size: 10pt;
    }
 
-   .LowNavLinks {
+   .LowNav .Links {
        height: 15px;
    }
 }
