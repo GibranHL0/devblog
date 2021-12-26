@@ -76,7 +76,7 @@ body {
 }
 
 .Content li::before {
-     content: '➡';
+     content: '🔥';
      margin-left: -30px;
      margin-right: 10px;
 }
@@ -91,6 +91,39 @@ body {
      border-radius: 25pt;
      max-width: 100%;
      height: auto;
+}
+
+.Content table {
+     text-align: center;
+     border-collapse: collapse;
+     margin-left: auto;
+     margin-right: auto;
+     margin-top: 5%;
+     margin-bottom: 5%;
+     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.Content table thead tr {
+     background-color: #D65A31;
+     color: #EEEEEE;
+}
+
+.Content th,
+.Content td {
+     padding: 12px 15px;
+}
+
+.Content tbody tr:nth-of-type(even){
+     background-color: #f3f3f3;
+}
+
+.Content tbody tr:last-of-type {
+     border-bottom: 2px solid #D65A31;
+}
+
+.Content tbody tr.active-row {
+     font-weight: bold;
+     color: #D65A31;
 }
 
 .Tag {
@@ -148,6 +181,10 @@ body {
      .Content greetings {
           font-size: 28pt;
      }
+
+     .Content table {
+          font-size: 18pt;
+     }
      
      .Tags {
           margin-bottom: 8%;
@@ -182,7 +219,7 @@ body {
      }
       
      .Content h2 {
-          font-size: 18pt;
+          font-size: 16pt;
      }
      
      .Content p {
@@ -200,6 +237,10 @@ body {
 
      .Content greetings {
           font-size: 18pt;
+     }
+
+     .Content table {
+          font-size: 10pt;
      }
 
      .Content img {
