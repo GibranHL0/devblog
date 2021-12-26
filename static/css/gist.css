@@ -107,12 +107,12 @@ body .gist .highlight-text-html-basic .pl-ent {
 body .gist .pl-c,
 body .gist .pl-c span,
 body .gist .pl-mq {
-    color: rgb(171, 171, 171);
+    color: rgb(133, 133, 133);
 }
 body .gist .pl-c1,
 body .gist .pl-sv,
 body .gist .pl-mb {
-    color: #fc3469;
+    color: #ff3c70;
 }
 body .gist .pl-e,
 body .gist .pl-k,
@@ -126,5 +126,5 @@ body .gist .pl-mr,
 body .gist .pl-ms,
 body .gist .pl-st,
 body .gist .pl-mi {
-    color: #ff9d00;
+    color: #ff7a27;
 }
