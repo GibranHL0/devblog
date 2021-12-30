@@ -26,6 +26,8 @@ func GetArticle(
 	if err != nil {
 		info := fmt.Sprintf("%s article caused the error", id)
 		errorhandler.ReportError(err, info)
+
+		return err
 	}
 
 	// Finally, Decode the result into the struct
