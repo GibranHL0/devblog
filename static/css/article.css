@@ -4,11 +4,9 @@ body {
      margin: 0%;
 }
 
-.Article h1 {
-     font-family: 'Montserrat';
-}
-
-.Article h2 {
+.Article h1,
+.Article h2,
+.Article h3 {
      font-family: 'Montserrat';
 }
 
@@ -54,6 +52,11 @@ body {
      margin-top: 10%;
 }
 
+.Content h3 {
+     margin-top: 5%;
+     margin-bottom: 5%;
+}
+
 .Content greetings {
      font-family: 'Montserrat';
      font-weight: bold;
@@ -66,6 +69,11 @@ body {
      font-weight: bold;
      background-color: #D65A31;
      color: #EEEEEE;
+}
+
+.Content .badges {
+     background-color: #EEEEEE;
+     padding: 0px;
 }
 
 .Content ul {
@@ -164,6 +172,10 @@ body {
      .Content h2 {
           font-size: 26pt;
      }
+
+     .Content h3 {
+          font-size: 22pt;
+     }
      
      .Content p {
           font-size: 18pt;
@@ -220,6 +232,10 @@ body {
       
      .Content h2 {
           font-size: 16pt;
+     }
+
+     .Content h3 {
+          font-size: 14pt;
      }
      
      .Content p {
