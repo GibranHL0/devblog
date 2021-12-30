@@ -4,10 +4,7 @@ body {
     margin: 0%;
 }
 
-.About h2 {
-    font-family: 'Montserrat';
-}
-
+.About h2,
 .About h3 {
     font-family: 'Montserrat';
 }
@@ -16,10 +13,7 @@ body {
     font-family: "Inconsolata";
 }
 
-.About-right {
-    margin-bottom: 12%;
-}
-
+.About-right,
 .Subtitle {
     margin-bottom: 12%;
 }
