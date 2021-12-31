@@ -53,7 +53,7 @@
             {{end}}
             <div class="pagination">
                 {{if .HasBefore}}
-                    <a href="http://localhost:8000/?page={{.Older}}">Older</a>
+                    <a href="http://localhost:8000/?page={{.Newer}}">Newer</a>
                 {{end}}
                 {{$current := .Current}}
                 {{range .Pages}}
@@ -64,7 +64,7 @@
                     {{end}}
                 {{end}}
                 {{if .HasNext}}
-                    <a href="http://localhost:8000/?page={{.Newer}}">Newer</a>
+                    <a href="http://localhost:8000/?page={{.Older}}">Older</a>
                 {{end}}
             </div>
         </div>

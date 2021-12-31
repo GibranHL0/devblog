@@ -31,8 +31,8 @@ func GetHomePage(articles []ArticleView, pagenumber int64, maxpages int64) HomeP
 		Articles: articles,
 		HasBefore: hasbefore,
 		HasNext: hasnext,
-		Older: pagenumber - 1,
-		Newer: pagenumber + 1,
+		Older: pagenumber + 1,
+		Newer: pagenumber - 1,
 		Current: pagenumber,
 		Pages: pages,
 	}
