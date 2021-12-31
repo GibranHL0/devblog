@@ -30,7 +30,7 @@ func (mr *MongoRepository) GetArticle(id primitive.ObjectID) (
 	return result, nil
 }
 
-func (mr *MongoRepository) GetHomeView(skip int64, limit int64) (
+func (mr *MongoRepository) GetArticlesView(skip int64, limit int64) (
 	*mongo.Cursor, error) {
 
 	filter := bson.M{}

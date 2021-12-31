@@ -37,16 +37,20 @@ func homeHandler(templates *template.Template, db *connection.Database) http.Han
 			executeNotFound(rw)
 			return
 		}
-		skip := calculateSkip(totalarticles, pagenumber)
-		views := make([]models.HomeView, 0)
+		maxpages := getMaxPages(totalarticles)
+		pagenumber = normalizePageNumber(pagenumber, maxpages)
+		skip := calculateSkip(pagenumber)
+		articles := make([]models.ArticleView, 0)
 
-		err = services.GetHomeView(mr, &views, skip, 9)
+		err = services.GetArticlesView(mr, &articles, skip, 9)
 		if err != nil {
 			executeNotFound(rw)
 			return
 		}
 
-		executeTemplate(templates, "home.html", views, rw)
+		homepage := models.GetHomePage(articles, pagenumber, maxpages)
+
+		executeTemplate(templates, "home.html", homepage, rw)
 	}
 }
 

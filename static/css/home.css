@@ -85,6 +85,28 @@ body {
     border-radius: 25pt;
 }
 
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination a.active {
+  background-color: #D65A31;
+  color: #EEEEEE;
+  border-radius: 5px;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+  border-radius: 5px;
+}
+
 @media screen and (min-width: 601px) {
     .HomePage {
         margin-top: 150px;

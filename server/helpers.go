@@ -40,17 +40,23 @@ func getPageNumber(page string) (pagenumber int64) {
 	return pagenumber
 }
 
-func calculateSkip(totalarticles int64, pagenumber int64) int64 {
+func calculateSkip(pagenumber int64) int64 {
+	skip := (pagenumber - 1) * 9
+
+	return skip
+}
+
+func normalizePageNumber(pagenumber int64, maxpages int64) int64 {
 	// Eliminate the issue with negative page numbers
 	if pagenumber < 1 { pagenumber = 1 }
-
-	maxpages := int64(math.Ceil(float64(totalarticles) / 9))
 
 	if pagenumber > maxpages {
 		pagenumber = maxpages
 	}
 
-	skip := (pagenumber - 1) * 9
+	return pagenumber
+}
 
-	return skip
+func getMaxPages(totalarticles int64) int64 {
+	return int64(math.Ceil(float64(totalarticles) / 9))
 }

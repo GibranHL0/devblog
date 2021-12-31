@@ -25,8 +25,8 @@
             </p>
         </div>
         <div class="BlogsCarrusel">
-            {{range .}}
-            <div class="ArticleView">
+            {{range .Articles}}
+            <div class="ArticleView" onclick="location.href='localhost:8000/?id={{.Id}}'">
                 <div class="Picture-holder" style="background-image: url({{.Picture}});"></div>                
                 <h2 class="Title">
                     {{.Title}}
@@ -51,6 +51,22 @@
                 </div>
             </div>
             {{end}}
+            <div class="pagination">
+                {{if .HasBefore}}
+                    <a href="http://localhost:8000/?page={{.Older}}">Older</a>
+                {{end}}
+                {{$current := .Current}}
+                {{range .Pages}}
+                    {{if eq . $current}}
+                        <a class="active" href="http://localhost:8000/?page={{.}}">{{.}}</a>
+                    {{else}}
+                        <a href="http://localhost:8000/?page={{.}}">{{.}}</a>
+                    {{end}}
+                {{end}}
+                {{if .HasNext}}
+                    <a href="http://localhost:8000/?page={{.Newer}}">Newer</a>
+                {{end}}
+            </div>
         </div>
     </div>
     <div class="Footer">

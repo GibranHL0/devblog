@@ -34,9 +34,9 @@ func GetArticle(
 	return result.Decode(&article)
 }
 
-func GetHomeView(
+func GetArticlesView(
 	mr repository.MongoRepository,
-	views *[]models.HomeView,
+	articles *[]models.ArticleView,
 	skip int64,
 	limit int64) error {
 	
@@ -45,7 +45,7 @@ func GetHomeView(
 	defer cancel()
 
 	// Obtains the cursor with all the results
-	cursor, err := mr.GetHomeView(skip, limit)
+	cursor, err := mr.GetArticlesView(skip, limit)
 	if err != nil {
 		info := fmt.Sprintf(
 			"Home View couldn't load by %v cursor issue", cursor.ID(),
@@ -55,7 +55,7 @@ func GetHomeView(
 	}
 
 	// Decode all the info
-	return cursor.All(ctx, views)
+	return cursor.All(ctx, articles)
 }
 
 func CountArticles(mr repository.MongoRepository) (int64, error) {
