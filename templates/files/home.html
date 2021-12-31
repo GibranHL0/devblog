@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Junior Dev Blog</title>
+    <link href="/static/css/home.css" rel="stylesheet">
+    <link href="/static/css/header.css" rel="stylesheet">
+    <link href="/static/css/footer.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+</head>
+<body>
+    <div class="Header">
+        {{template "header"}}
+    </div>
+    <div class="HomePage">
+        <div class="BlogBrand">
+            <h2 class="BBAuthor">
+                Gibran Herrera's Blog
+            </h2>
+            <p class="BBDescription">
+                Latest updates of my dev journey 🌱
+            </p>
+        </div>
+        <div class="BlogsCarrusel">
+            {{range .}}
+            <div class="ArticleView">
+                <div class="Picture-holder" style="background-image: url({{.Picture}});"></div>                
+                <h2 class="Title">
+                    {{.Title}}
+                </h2>
+                <div class="Info">
+                    <p class="Author">
+                        {{.Author}}
+                    </p>
+                    <p class="Date">
+                        {{.Date}}
+                    </p>
+                </div>
+                <p class="Description">
+                    {{.Description}}
+                </p>
+                <div class="Tags">
+                    {{range .Tags}}
+                    <a href="#" target="_blank">
+                        <button class="Tag">{{.}}</button>
+                    </a>
+                    {{end}}
+                </div>
+            </div>
+            {{end}}
+        </div>
+    </div>
+    <div class="Footer">
+        {{template "footer"}}
+    </div>
+</body>
+</html>

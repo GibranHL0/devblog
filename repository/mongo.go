@@ -57,3 +57,15 @@ func (mr *MongoRepository) GetHomeView(skip int64, limit int64) (
 
 	return cursor, nil
 }
+
+func (mr *MongoRepository) CountArticles() (articles int64, err error) {
+	ctx, cancel := context.WithTimeout(context.Background(), mr.Db.Timing)
+	defer cancel()
+
+	articles, err = mr.Db.Collection.CountDocuments(ctx, bson.D{}, nil)
+	if err != nil {
+		return 0, err
+	}
+
+	return articles, nil
+}

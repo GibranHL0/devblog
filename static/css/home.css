@@ -1,0 +1,206 @@
+body {
+    background-color: #EEEEEE;
+    color: #393E46;
+    margin: 0%;
+}
+
+.HomePage h2 {
+    font-family: 'Montserrat';
+}
+
+.HomePage p {
+    font-family: 'Inconsolata';
+}
+
+.BlogBrand {
+    text-align: center;
+}
+
+.BBAuthor {
+    font-weight: bolder;
+}
+
+.BBDescription {
+    font-style: italic;
+}
+
+.BlogsCarrusel {
+    width: 100%;
+}
+
+.ArticleView {
+    display: inline-block;
+}
+
+.ArticleView:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+    border-radius: 5px 5px 0 0;
+}
+
+.Picture-holder {
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.Info {
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    height: auto;
+    align-items: center;
+}
+
+.Title {
+    text-align: center;
+}
+
+.Author {
+    margin-right: 3%;
+}
+
+.Description {
+    text-align: justify;
+}
+
+.Tags {
+    text-align: center;
+}
+
+.Tag:hover {
+    background-color: #D65A31;
+    color: #EEEEEE;
+    border: none;
+}
+
+.Tag {
+    color: #393E46;
+    background-color: #EEEEEE;
+    border: solid;
+    border-color: #222831;
+    text-align: center;
+    cursor: pointer;
+    margin-right: 3%;
+    border-radius: 25pt;
+}
+
+@media screen and (min-width: 601px) {
+    .HomePage {
+        margin-top: 150px;
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+
+    .BlogBrand {
+        margin-bottom: 5%;
+    }
+
+    .BBAuthor {
+        font-size: 35pt;
+    }
+
+    .BBDescription {
+        font-size: 14pt;
+    }
+
+    .BlogsCarrusel {
+        text-align: center;
+    }
+
+    .ArticleView {
+        width: 28%;
+        margin-bottom: 5%;
+        margin-right: 2%;
+        padding: 10px;
+        border: 5px;
+    }
+
+    .Picture-holder {
+        height: 400px;
+    }
+
+    .Title {
+        font-size: 19pt;
+    }
+
+    .Author {
+        font-size: 13pt;
+    }
+
+    .Date {
+        font-size: 10pt;
+    }
+
+    .Description {
+        font-size: 16pt;
+    }
+
+    .Tag {
+        font-size: 11pt;
+        padding: 7pt;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .HomePage {
+        margin-top: 110px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .BlogBrand {
+        margin-bottom: 12%;
+    }
+
+    .BBAuthor {
+        font-size: 20pt;
+    }
+
+    .BBDescription {
+        font-size: 8pt;
+    }
+
+    .ArticleView {
+        width: 100%;
+        margin-bottom: 15%;
+        border: 5px;
+        border-color: #EEEEEE;
+        border-bottom: solid;
+    }
+
+    .Picture-holder {
+        height: 250px;
+    }
+
+    .Info {
+        margin-top: -4%;
+        margin-bottom: -2%;
+    }
+
+    .Title {
+        font-size: 14pt;
+    }
+
+    .Author {
+        font-size: 10pt;
+    }
+
+    .Date {
+        font-size: 7pt;
+    }
+
+    .Description {
+        font-size: 11pt;
+        margin-bottom: 7%;
+    }
+
+    .Tags {
+        margin-bottom: 5%;
+    }
+
+    .Tag {
+        font-size: 7pt;
+        padding: 4pt;
+    }
+}

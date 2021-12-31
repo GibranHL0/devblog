@@ -28,6 +28,28 @@ func newsletterHandler(templates *template.Template) http.HandlerFunc {
 	}
 }
 
+func homeHandler(templates *template.Template, db *connection.Database) http.HandlerFunc {
+	return func(rw http.ResponseWriter, r *http.Request) {
+		pagenumber := getPageNumber(r.URL.Query().Get("page"))
+		mr := repository.MongoRepository{Db: db}
+		totalarticles, err := services.CountArticles(mr)
+		if err != nil {
+			executeNotFound(rw)
+			return
+		}
+		skip := calculateSkip(totalarticles, pagenumber)
+		views := make([]models.HomeView, 0)
+
+		err = services.GetHomeView(mr, &views, skip, 9)
+		if err != nil {
+			executeNotFound(rw)
+			return
+		}
+
+		executeTemplate(templates, "home.html", views, rw)
+	}
+}
+
 func articleHandler(templates *template.Template, db *connection.Database) http.HandlerFunc {
 	return func(rw http.ResponseWriter, r *http.Request) {
 
