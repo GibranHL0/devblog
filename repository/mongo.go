@@ -38,7 +38,7 @@ func (mr *MongoRepository) GetHomeView(skip int64, limit int64) (
 	ctx, cancel := context.WithTimeout(context.Background(), mr.Db.Timing)
 	defer cancel()
 
-	articlesView := mr.Db.Collection.Database().Collection("HomeArticles")
+	articlesView := mr.Db.Collection.Database().Collection("HomeView")
 
 	findOptions := options.FindOptions{
 		Skip: &skip,
