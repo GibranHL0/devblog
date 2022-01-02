@@ -4,70 +4,91 @@ body {
     margin: 0%;
 }
 
-.Contact {
+.contact {
     margin-left: 5%;
     margin-right: 5%;
 }
 
-.Contact h1 {
+.contact h1, h3 {
     font-family: 'Montserrat';
 }
 
-.Contact p {
+.contact p {
     font-family: 'Inconsolata';
+    text-align: justify;
 }
 
-.Title {
+.title {
     text-align: center;
     color: #393E46;
 }
 
-.mailto {
-    text-align: center;
-}
-
-.Email-button {
-    color: #393E46;
-    background-color: #EEEEEE;
-    padding: 15px;
-    border-radius: 15pt;
-    border: solid;
-    border-color: #222831;
-}
-
-.Email-button:hover {
-    color: #EEEEEE;
+.highlight {
     background-color: #D65A31;
-    border: none;
+    color: #EEEEEE;
+    padding: 2px;
 }
 
-.Social-links {
-    display: flex;
-    text-align: center;
+.icon-container {
     width: 100%;
-    justify-content: center;
+    text-align: center;
+}
+
+.icon-row a {
+    margin-right: 5%;
+}
+
+.icon {
+    font-size: larger;
+    color: #D65A31;
+}
+
+.picture {
+    margin-top: 10%;
+    width: 85%;
+    border-radius: 15pt;
+}
+
+.contact-right {
+    margin-top: 10%;
 }
 
 @media screen and (min-width: 601px) {
-    .Contact {
-        margin-top: 140px;
-    }
-    
-    .Title {
-        font-size: 28pt;
-    }
-
-    .mailto {
-        margin-top: 3%;
+    .contact {
+        margin-top: 156px;
+        margin-left: 10%;
+        margin-right: 10%;
         margin-bottom: 4%;
     }
 
-    .Email-button {
-        font-size: 18pt;
+    .contact-column {
+        float: left;
+        width: 50%;
     }
 
-    .Twitter {
-        margin-left: 5%;
+    .contact-row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .title {
+        font-size: 28pt;
+    }
+
+    .subtitle {
+        font-size: 24pt;
+        margin-top: 6%;
+        margin-bottom: 6%;
+    }
+
+    .text {
+        font-size: 20pt;
+        margin-bottom: 6%;
+    }
+
+    .icon {
+        font-size: 8em;
     }
 
     .LowNav {
@@ -76,20 +97,15 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-    .Contact {
+    .contact {
         margin-top: 70px;
     }
     
-    .Title {
+    .title {
         font-size: 20pt;
     }
 
-    .mailto {
-        margin-top: 8%;
-        margin-bottom: 8%;
-    }
-
-    .Email-button {
-        font-size: 12pt;
+    .icon {
+        font-size: 4em;
     }
 }

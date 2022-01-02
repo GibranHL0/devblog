@@ -10,30 +10,44 @@
     <link href="/static/css/footer.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 </head>
 <body>
     <div class="Header">
         {{template "header"}}
     </div>
-    <div class="Contact">
-        <h1 class="Title">Want to leave a message?</h1>
-        <div class="Social-links">
-            <div class="Twitter">
-                <a 
-                class="twitter-timeline" 
-                data-width="500" 
-                data-height="500" 
-                data-theme="dark" 
-                href="https://twitter.com/gibranhl?ref_src=twsrc%5Etfw">
-                    Tweets by gibranhl
-                </a>
+    <div class="contact">
+        <h1 class="title">Want to know me better?</h1>
+        <div class="contact-row">
+            <div class="contact-column">
+                <div class="contact-left">
+                    <img class="picture" src="/static/pictures/contact.jpg">
+                </div>
             </div>
-        </div>
-        <div class="mailto">
-            <a href="mailto:gibranhl2@gmail.com?subject=Hey, I checked out your blog!">
-                <button class="Email-button">Email Me</button>
-            </a>
+            <div class="contact-column">
+                <div class="contact-right">
+                    <p class="text">
+                        <span class="highlight">Passion</span> describes myself. I bring it on all the projects I get 
+                        involved, from work to open source, and of course my daily life. 
+                        But I also have a growing skillset including Go, Python, Linux, AWS,
+                        SQL, and Web Development (HTML, CSS, JavaScript).
+                    </p>
+                    <h3 class="subtitle">Feel free to contact me:</h3>
+                    <div class="icon-container">
+                        <div class="icon-row">
+                            <a href="mailto:gibranhl2@gmail.com?subject=Hey, I checked out your blog!">
+                                <span class="icon"><i class="fas fa-envelope-square"></i></span>
+                            </a>
+                            <a href="https://twitter.com/gibranhl" target="_blank">
+                                <span class="icon"><i class="fab fa-twitter-square"></i></span>
+                            </a>
+                            <a href="https://mx.linkedin.com/in/gibranherreralopez" target="_blank">
+                                <span class="icon"><i class="fab fa-linkedin"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <div class="Footer">
