@@ -36,6 +36,7 @@ body {
 
 .icon-row a {
     margin-right: 5%;
+    text-decoration: none;
 }
 
 .icon {
