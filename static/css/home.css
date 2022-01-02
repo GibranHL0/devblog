@@ -4,6 +4,10 @@ body {
     margin: 0%;
 }
 
+a {
+    text-decoration: none;
+}
+
 .HomePage h2 {
     font-family: 'Montserrat';
 }
@@ -26,6 +30,10 @@ body {
 
 .BlogsCarrusel {
     width: 100%;
+}
+
+.clickable {
+    color: #393E46;
 }
 
 .ArticleView {
