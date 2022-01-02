@@ -51,22 +51,24 @@
                 </div>
             </div>
             {{end}}
-            <div class="pagination">
-                {{if .HasBefore}}
-                    <a href="http://localhost:8000/?page={{.Newer}}">Newer</a>
+        </div>
+    </div>
+    <div class="pagination-container">
+        <div class="pagination">
+            {{if .HasBefore}}
+                <a href="http://localhost:8000/?page={{.Newer}}">Newer</a>
+            {{end}}
+            {{$current := .Current}}
+            {{range .Pages}}
+                {{if eq . $current}}
+                    <a class="active" href="http://localhost:8000/?page={{.}}">{{.}}</a>
+                {{else}}
+                    <a href="http://localhost:8000/?page={{.}}">{{.}}</a>
                 {{end}}
-                {{$current := .Current}}
-                {{range .Pages}}
-                    {{if eq . $current}}
-                        <a class="active" href="http://localhost:8000/?page={{.}}">{{.}}</a>
-                    {{else}}
-                        <a href="http://localhost:8000/?page={{.}}">{{.}}</a>
-                    {{end}}
-                {{end}}
-                {{if .HasNext}}
-                    <a href="http://localhost:8000/?page={{.Older}}">Older</a>
-                {{end}}
-            </div>
+            {{end}}
+            {{if .HasNext}}
+                <a href="http://localhost:8000/?page={{.Older}}">Older</a>
+            {{end}}
         </div>
     </div>
     <div class="Footer">

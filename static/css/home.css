@@ -8,7 +8,7 @@ body {
     font-family: 'Montserrat';
 }
 
-.HomePage p {
+.HomePage p, .pagination {
     font-family: 'Inconsolata';
 }
 
@@ -83,6 +83,13 @@ body {
     cursor: pointer;
     margin-right: 3%;
     border-radius: 25pt;
+}
+
+.pagination-container {
+    width: 100%;
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 5%;
 }
 
 .pagination {
@@ -162,6 +169,10 @@ body {
         font-size: 11pt;
         padding: 7pt;
     }
+
+    .pagination {
+        font-size: 14pt;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -224,5 +235,9 @@ body {
     .Tag {
         font-size: 7pt;
         padding: 4pt;
+    }
+
+    .pagination {
+        font-size: 10pt;
     }
 }
