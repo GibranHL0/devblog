@@ -26,30 +26,32 @@
         </div>
         <div class="BlogsCarrusel">
             {{range .Articles}}
-            <div class="ArticleView" onclick="location.href='localhost:8000/?id={{.Id}}'">
-                <div class="Picture-holder" style="background-image: url({{.Picture}});"></div>                
-                <h2 class="Title">
-                    {{.Title}}
-                </h2>
-                <div class="Info">
-                    <p class="Author">
-                        {{.Author}}
+            <a class="clickable" href="http://localhost:8000/article?id={{.Id}}">
+                <div class="ArticleView">
+                    <div class="Picture-holder" style="background-image: url({{.Picture}});"></div>                
+                    <h2 class="Title">
+                        {{.Title}}
+                    </h2>
+                    <div class="Info">
+                        <p class="Author">
+                            {{.Author}}
+                        </p>
+                        <p class="Date">
+                            {{.Date.Format "2006 Jan 02"}}
+                        </p>
+                    </div>
+                    <p class="Description">
+                        {{.Description}}
                     </p>
-                    <p class="Date">
-                        {{.Date.Format "2006 Jan 02"}}
-                    </p>
+                    <div class="Tags">
+                        {{range .Tags}}
+                        <a href="#">
+                            <button class="Tag">{{.}}</button>
+                        </a>
+                        {{end}}
+                    </div>
                 </div>
-                <p class="Description">
-                    {{.Description}}
-                </p>
-                <div class="Tags">
-                    {{range .Tags}}
-                    <a href="#" target="_blank">
-                        <button class="Tag">{{.}}</button>
-                    </a>
-                    {{end}}
-                </div>
-            </div>
+            </a>
             {{end}}
         </div>
     </div>
