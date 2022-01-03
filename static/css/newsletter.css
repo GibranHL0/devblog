@@ -17,7 +17,7 @@ body {
 }
 
 .News-container{
-    padding: 100px 40px;
+    padding: 50px 40px;
     text-align: center;
     color: #393E46;
 }
@@ -96,7 +96,7 @@ body {
 
 @media screen and (max-width: 600px) {
     .Title {
-        font-size: 24pt;
+        font-size: 15pt;
     }
 
     .Description {
@@ -119,5 +119,14 @@ body {
         background: #393E46;
         width: 30px;
         line-height: 30px;
+    }
+
+    .thanks-container {
+        margin-top: 10%;
+    }
+
+    .thanks-img {
+        width: 240px;
+        height: auto;
     }
 }

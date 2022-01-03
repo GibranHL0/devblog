@@ -17,20 +17,29 @@
         {{template "header"}}
     </div>
     <div class="Newsletter">
+        {{if .Success}}
         <div class="News-container">
-            <form action="">
+            <h1 class="Title">🎉 Thanks for Subscribing 🎉</h1>
+            <div class="thanks-container">
+                <img class="thanks-img" src="https://64.media.tumblr.com/d420af617681d824a64322d7aaccbeed/tumblr_psdx6nZVou1s4xk33o1_500.gif">
+            </div>
+        </div>
+        {{else}}
+        <div class="News-container">
+            <form method="POST">
               <h1 class="Title">Join Junior Dev Newsletter</h1>
               <p class="Description">Get the latest of my dev journey, and hopefully leave the Junior steps soon.</p>
               <div class="Email-box">
                 <span class="Email-icon">
                     <i class="fas fa-envelope"></i>
                 </span>
-                <input class="Tbox" type="email" name="" value="" placeholder="Enter your email">
-                <button class="Btn" type="button" name="button">Subscribe</button>
+                <input class="Tbox" type="email" name="email" placeholder="Enter your email">
+                <button class="Btn" type="submit" name="button">Subscribe</button>
               </div>
               <p class="Disclosure">Promise to not spam you!</p>
             </form>
-          </div>
+        </div>
+        {{end}}  
     </div>
     <div class="Footer">
         {{template "footer"}}

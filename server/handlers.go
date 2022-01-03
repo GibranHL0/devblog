@@ -1,8 +1,10 @@
 package server
 
 import (
+	"fmt"
 	"net/http"
 	"text/template"
+	"time"
 
 	"github.com/GibranHL0/devblog/connection"
 	"github.com/GibranHL0/devblog/models"
@@ -24,7 +26,20 @@ func contactHandler(templates *template.Template) http.HandlerFunc {
 
 func newsletterHandler(templates *template.Template) http.HandlerFunc {
 	return func(rw http.ResponseWriter, r *http.Request) {
-		executeTemplate(templates, "newsletter.html", nil, rw)
+		if r.Method != http.MethodPost {
+			executeTemplate(templates, "newsletter.html", nil, rw)
+			return
+		}
+
+		suscriber := models.Suscriber{
+			Email:  r.FormValue("email"),
+			SignOn: time.Now(),
+			Enable: true,
+		}
+
+		fmt.Println("Email: ", suscriber)
+
+		executeTemplate(templates, "newsletter.html", struct{ Success bool }{true}, rw)
 	}
 }
 

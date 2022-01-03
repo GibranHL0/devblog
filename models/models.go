@@ -31,3 +31,10 @@ type HomePage struct {
 	Newer     int64
 	Pages     []int64
 }
+
+type Suscriber struct {
+	Email   string    `bson:"email"`
+	SignOn  time.Time `bson:"sign_on"`
+	SignOff time.Time `bson:"sign_off"`
+	Enable  bool      `bson:"enable"`
+}
