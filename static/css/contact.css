@@ -39,9 +39,13 @@ body {
     text-decoration: none;
 }
 
+.icon-row a:hover .icon {
+    color: #D65A31;
+}
+
 .icon {
     font-size: larger;
-    color: #D65A31;
+    color: #393E46;
 }
 
 .picture {
