@@ -2,6 +2,7 @@ package services
 
 import (
 	"context"
+	"errors"
 	"fmt"
 
 	"github.com/GibranHL0/devblog/errorhandler"
@@ -66,4 +67,19 @@ func CountArticles(mr repository.MongoRepository) (int64, error) {
 	}
 
 	return articles, nil
+}
+
+func CreateSub(mr repository.MongoRepository, sub models.Subscriber) (error) {
+	result, err := mr.CreateSub(sub)
+	if err != nil {
+		return err
+	}
+
+	if result.InsertedID == nil {
+		err := errors.New("services: Couldn't create sub")
+		errorhandler.ReportError(err, sub.Email)
+		return err
+	}
+
+	return nil
 }

@@ -4,6 +4,7 @@ import (
 	"context"
 
 	"github.com/GibranHL0/devblog/connection"
+	"github.com/GibranHL0/devblog/models"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/mongo"
@@ -68,4 +69,19 @@ func (mr *MongoRepository) CountArticles() (articles int64, err error) {
 	}
 
 	return articles, nil
+}
+
+func (mr *MongoRepository) CreateSub(sub models.Subscriber) (
+	*mongo.InsertOneResult, error) {
+	subCollection := mr.Db.Collection.Database().Collection("subscribers")
+
+	ctx, cancel := context.WithTimeout(context.Background(), mr.Db.Timing)
+	defer cancel()
+
+	result, err := subCollection.InsertOne(ctx, sub)
+	if err != nil {
+		return nil, err
+	}
+
+	return result, nil
 }

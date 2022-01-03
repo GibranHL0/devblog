@@ -22,7 +22,7 @@ func initializeHandlers(
 	mux.HandleFunc("/article", articleHandler(templates, db))
 	mux.HandleFunc("/about", aboutHandler(templates))
 	mux.HandleFunc("/contact", contactHandler(templates))
-	mux.HandleFunc("/suscribe", newsletterHandler(templates))
+	mux.HandleFunc("/suscribe", newsletterHandler(templates, db))
 }
 
 func StartMux(

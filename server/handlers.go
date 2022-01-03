@@ -1,7 +1,6 @@
 package server
 
 import (
-	"fmt"
 	"net/http"
 	"text/template"
 	"time"
@@ -24,7 +23,7 @@ func contactHandler(templates *template.Template) http.HandlerFunc {
 	}
 }
 
-func newsletterHandler(templates *template.Template) http.HandlerFunc {
+func newsletterHandler(templates *template.Template, db *connection.Database) http.HandlerFunc {
 	return func(rw http.ResponseWriter, r *http.Request) {
 		if r.Method != http.MethodPost {
 			executeTemplate(templates, "newsletter.html", nil, rw)
@@ -37,7 +36,9 @@ func newsletterHandler(templates *template.Template) http.HandlerFunc {
 			Enable: true,
 		}
 
-		fmt.Println("Email: ", subscriber)
+		mr := repository.MongoRepository{Db: db}
+
+		services.CreateSub(mr, subscriber)
 
 		executeTemplate(templates, "newsletter.html", struct{ Success bool }{true}, rw)
 	}
