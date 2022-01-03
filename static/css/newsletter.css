@@ -29,15 +29,12 @@ body {
 }
 
 .Email-box{
-    height: 40px;
     justify-content: center;
     display: flex;
 }
 
 .Email-box i{
     background: #393E46;
-    width: 40px;
-    line-height: 40px;
 }
 
 .Tbox,.Btn{
@@ -51,6 +48,10 @@ body {
     padding: 0 10px;
     text-transform: uppercase;
     cursor: pointer;
+}
+
+.Btn:hover {
+    background: #D65A31;
 }
 
 .LowNav {
@@ -67,19 +68,29 @@ body {
 
 @media screen and (min-width: 601px) {
     .Title {
-        font-size: 32pt;
+        font-size: 36pt;
     }
 
     .Description {
-        font-size: 12pt;
+        font-size: 16pt;
     }
 
     .Disclosure {
-        font-size: 15px;
+        font-size: 14pt;
     }
     
     .Tbox{
-        width: 22%;
+        width: 25%;
+    }
+
+    .Email-box{
+        height: 50px;
+        font-size: 20pt;
+    }
+
+    .Email-box i{
+        width: 50px;
+        line-height: 50px;
     }
 }
 
@@ -98,5 +109,15 @@ body {
     
     .Tbox{
         width: 80%;
+    }
+
+    .Email-box{
+        height: 30px;
+    }
+
+    .Email-box i{
+        background: #393E46;
+        width: 30px;
+        line-height: 30px;
     }
 }
