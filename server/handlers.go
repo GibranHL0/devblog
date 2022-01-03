@@ -31,13 +31,13 @@ func newsletterHandler(templates *template.Template) http.HandlerFunc {
 			return
 		}
 
-		suscriber := models.Suscriber{
+		subscriber := models.Subscriber{
 			Email:  r.FormValue("email"),
 			SignOn: time.Now(),
 			Enable: true,
 		}
 
-		fmt.Println("Email: ", suscriber)
+		fmt.Println("Email: ", subscriber)
 
 		executeTemplate(templates, "newsletter.html", struct{ Success bool }{true}, rw)
 	}

@@ -32,7 +32,7 @@ type HomePage struct {
 	Pages     []int64
 }
 
-type Suscriber struct {
+type Subscriber struct {
 	Email   string    `bson:"email"`
 	SignOn  time.Time `bson:"sign_on"`
 	SignOff time.Time `bson:"sign_off"`
