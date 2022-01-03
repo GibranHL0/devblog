@@ -63,7 +63,7 @@ body .gist .pl-s,
 body .gist .pl-s1,
 body .gist .pl-s1 .pl-pse .pl-s2,
 body .gist .pl-s1 .pl-v {
-    color: #3ad900;
+    color: #ffee80;
 }
 body .gist .pl-s1 .pl-s2,
 body .gist .pl-smi,
@@ -96,7 +96,7 @@ body .gist .pl-mdhf {
     background: #800f00;
 }
 body .gist .highlight-source-js .pl-st {
-    color: #ffee80;
+    color: #ef57fd;
 }
 body .gist .highlight-source-css .pl-s3 {
     color: #80ffbb;

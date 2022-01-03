@@ -1,26 +1,6 @@
-body {
-    background-color: #EEEEEE;
-    color: #393E46;
-    margin: 0%;
-}
-
 .contact {
     margin-left: 5%;
     margin-right: 5%;
-}
-
-.contact h1, h3 {
-    font-family: 'Montserrat';
-}
-
-.contact p {
-    font-family: 'Inconsolata';
-    text-align: justify;
-}
-
-.title {
-    text-align: center;
-    color: #393E46;
 }
 
 .highlight {
@@ -36,7 +16,6 @@ body {
 
 .icon-row a {
     margin-right: 5%;
-    text-decoration: none;
 }
 
 .icon-row a:hover .icon {
@@ -58,7 +37,7 @@ body {
     margin-top: 10%;
 }
 
-.Footer {
+.footer {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -103,7 +82,7 @@ body {
         font-size: 8em;
     }
 
-    .LowNav {
+    .lownav {
         position: absolute;
     }
 }

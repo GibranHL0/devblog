@@ -1,37 +1,17 @@
-body {
-    background-color: #EEEEEE;
-    color: #393E46;
-    margin: 0%;
-}
-
-.About h2,
-.About h3 {
-    font-family: 'Montserrat';
-}
-
-.About p {
-    font-family: "Inconsolata";
-}
-
-.About-right,
-.Subtitle {
+.about-right, .subtitle {
     margin-bottom: 12%;
 }
 
-.Text {
-    text-align: justify;
-}
-
-.About-left {
+.about-left {
     text-align: center;
 }
 
-.Picture {
+.picture {
     width: 65%;
     border-radius: 15pt;
 }
 
-.Footer {
+.footer {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -39,67 +19,66 @@ body {
 }
 
 @media screen and (min-width: 601px) {
-    .About {
+    .about {
         margin-top: 156px;
         margin-left: 10%;
         margin-right: 10%;
         margin-bottom: 4%;
     }
 
-    .About-column {
+    .about-column {
         float: left;
         width: 50%;
     }
 
-    .About-row:after {
+    .about-row:after {
         content: "";
         display: table;
         clear: both;
     }
 
-    .Title {
+    .title {
         font-size: 32pt;
     }
 
-    .Subtitle {
+    .subtitle {
         font-size: 16pt;
         margin-bottom: 12%;
     }
 
-    .Text {
+    .text {
         font-size: 20pt;
         margin-bottom: 6%;
     }
 
-    .About-left {
+    .about-left {
         margin-top: 10%;
         margin-left: 10%;
     }
 }
 
 @media screen and (max-width: 600px) {
-    .About {
+    .about {
         margin-top: 80px;
         margin-left: 5%;
         margin-right: 5%;
         margin-bottom: 4%;
     }
 
-    .Title {
+    .title {
         font-size: 22pt;
-        text-align: center;
     }
 
-    .Subtitle {
+    .subtitle {
         font-size: 10pt;
     }
 
-    .Text {
+    .text {
         font-size: 12pt;
         margin-bottom: 8%;
     }
 
-    .About-left {
+    .about-left {
         margin-bottom: 15%;
     }
 }

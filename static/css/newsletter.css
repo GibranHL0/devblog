@@ -1,121 +1,109 @@
-body {
-    background-color: #EEEEEE;
-    color: #393E46;
-    margin: 0%;
-}
-
-.Newsletter {
+.newsletter {
     margin-top: 10%;
 }
 
-.Newsletter h1 {
-    font-family: 'Montserrat';
-}
-
-.Newsletter p {
-    font-family: 'Inconsolata';
-}
-
-.News-container{
+.news-container{
     padding: 50px 40px;
-    text-align: center;
     color: #393E46;
 }
 
-.News-container p {
+.news-container p {
     max-width: 600px;
     margin: 40px auto;
     font-weight: 300;
 }
 
-.Email-box{
+.email-box{
     justify-content: center;
     display: flex;
 }
 
-.Email-box i{
+.email-box i, .btn{
     background: #393E46;
 }
 
-.Tbox,.Btn{
+.tbox,.btn{
     border: none;
     outline: none;
 }
 
-.Btn{
-    background: #393E46;
-    color: #EEEEEE;
+.btn{
     padding: 0 10px;
     text-transform: uppercase;
     cursor: pointer;
 }
 
-.Btn:hover {
+.btn:hover {
     background: #D65A31;
 }
 
-.LowNav {
+.lownav {
     position: absolute;
 }
 
-.Tbox{
+.tbox{
     transition: 0.6s;
 }
 
-.Email-icon {
+.email-icon, .btn {
     color: #EEEEEE;
 }
 
+.disclosure, .news-container {
+    text-align: center;
+}
+
 @media screen and (min-width: 601px) {
-    .Title {
+    .title {
         font-size: 36pt;
     }
 
-    .Description {
+    .description {
         font-size: 16pt;
     }
 
-    .Disclosure {
+    .disclosure {
         font-size: 14pt;
     }
     
-    .Tbox{
+    .tbox{
         width: 25%;
     }
 
-    .Email-box{
+    .email-box{
         height: 50px;
         font-size: 20pt;
     }
 
-    .Email-box i{
+    .email-box i{
         width: 50px;
         line-height: 50px;
     }
 }
 
 @media screen and (max-width: 600px) {
-    .Title {
+    .title {
         font-size: 15pt;
     }
 
-    .Description {
+
+    .description {
         font-size: 10pt;
     }
 
-    .Disclosure {
+    .disclosure {
         font-size: 12px;
     }
     
-    .Tbox{
+    .tbox{
         width: 80%;
     }
 
-    .Email-box{
+    .email-box{
         height: 30px;
     }
 
-    .Email-box i{
+    .email-box i{
         background: #393E46;
         width: 30px;
         line-height: 30px;

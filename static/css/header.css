@@ -1,8 +1,8 @@
-.Header {
+.header {
      font-family: 'Montserrat';
 }
 
-.TopNav {
+.topnav {
      background-color: #D65A31;
      width: 100%;
      justify-content: center;
@@ -10,7 +10,7 @@
      top: 0;
 }
 
-.TopNavElements {
+.topnavelements {
      width: 90%;
      height: 100%;
      align-items: center;
@@ -18,11 +18,11 @@
      margin-left: 3%;
 }
 
-.TopNavLinks {
+.topnavlinks {
      margin-left: 5%;
 }
 
-.TopNav a {
+.topnav a {
      float: left;
      color: #EEEEEE;
      text-align: center;
@@ -30,40 +30,40 @@
      text-decoration: none;
 }
 
-.TopNav a:hover {
+.topnav a:hover {
      font-weight: bolder;
 }
 
-.TopNav a.active {
+.topnav a.active {
      color: #EEEEEE;
      height: auto;
      font-weight: bolder;
 }
 
 @media screen and (min-width: 601px) {
-    .TopNav {
+    .topnav {
          height: 100px;
     }
     
-    .TopNav a {
+    .topnav a {
          font-size: 14pt;
     }
     
-    .TopNav a.active {
+    .topnav a.active {
          font-size: 31pt;
     }
 }
 
 @media screen and (max-width: 600px) {
-     .TopNav {
+     .topnav {
           height: 60px;
      }
 
-     .TopNav a {
+     .topnav a {
           font-size: 5pt;
      }
      
-     .TopNav a.active {
+     .topnav a.active {
           font-size: 9pt;
      }
 }

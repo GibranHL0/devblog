@@ -1,287 +1,229 @@
-body {
-     background-color: #EEEEEE;
-     color: #393E46;
-     margin: 0%;
+.articleinfo, .content h2, .content h3, .content img, table, ul {
+     margin-bottom: 5%;
 }
 
-.Article h1,
-.Article h2,
-.Article h3 {
-     font-family: 'Montserrat';
-     font-weight: bolder;
-}
-
-.Article p {
-     font-family: 'Inconsolata';
-}
-
-.Article a {
-     text-decoration: none;
-}
-
-.TitleSection {
+.titlesection, greetings, table, .Picture {
      text-align: center;
+}
+
+.articleauthorpicture, .content img {
+     height: auto;
+}
+
+.titlesection {
      margin-bottom: 10%;
 }
 
-.ArticleInfo {
-     margin-bottom: 5%;
+.picture, .articleinfo {
+     width: 100%;
+}
+
+.articleinfo {
      display: flex;
      flex-direction: row;
      align-items: center;
-     width: 100%;
      flex-wrap: nowrap;
      justify-content: center;
 }
 
-.ArticleAuthor {
+.articleauthor {
      margin-right: 3%;
      font-weight: bolder;
      font-style: italic;
 }
 
-.ArticleAuthorPicture {
+.articleauthorpicture {
      margin-right: 2%;
-     height: auto;
      border-radius: 50%;
 }
 
-.Content p {
-     font-weight: 100;
-     text-align: justify;
-}
-
-.Content h2 {
-     text-align: center;
-     margin-bottom: 5%;
+.content h2 {
      margin-top: 8%;
 }
 
-.Content h3 {
+.content h3 {
      margin-top: 5%;
-     margin-bottom: 5%;
 }
 
-.Content greetings {
+.content greetings {
      font-family: 'Montserrat';
      font-weight: bold;
-     text-align: center;
 }
 
-.Content a {
+.content a {
+     text-decoration: underline;
      padding: 3px;
      font-weight: bold;
      background-color: #D65A31;
      color: #EEEEEE;
 }
 
-.Content .badges {
+.content .badges {
      background-color: #EEEEEE;
      padding: 0px;
 }
 
-.Content ul {
+.content ul {
      list-style: none;
      text-align: left;
-     margin-bottom: 5%;
      margin-top: 5%;
 }
 
-.Content li::before {
+.content li::before {
      content: '🔥';
      margin-left: -30px;
      margin-right: 10px;
 }
 
-.Content li {
+.content li {
      margin-bottom: 3%;
 }
 
-.Content img {
+.content img {
      margin-top: 5%;
-     margin-bottom: 5%;
      border-radius: 25pt;
      max-width: 100%;
-     height: auto;
 }
 
-.Content table {
-     text-align: center;
+.content table {
      border-collapse: collapse;
      margin-left: auto;
      margin-right: auto;
      margin-top: 5%;
-     margin-bottom: 5%;
      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
-.Content table thead tr {
+.content table thead tr {
      background-color: #D65A31;
      color: #EEEEEE;
 }
 
-.Content th,
-.Content td {
+.content th, .content td {
      padding: 12px 15px;
 }
 
-.Content tbody tr:nth-of-type(even){
+.content tbody tr:nth-of-type(even){
      background-color: #f3f3f3;
 }
 
-.Content tbody tr:last-of-type {
+.content tbody tr:last-of-type {
      border-bottom: 2px solid #D65A31;
 }
 
-.Content tbody tr.active-row {
+.content tbody tr.active-row {
      font-weight: bold;
      color: #D65A31;
 }
 
-.Content .farewell {
+.content .farewell {
      margin-top: 10%;
      margin-bottom: 12%;
 }
 
-.Tag {
-     color: #393E46;
-     background-color: #EEEEEE;
-     border: solid;
-     text-align: center;
-     cursor: pointer;
-     margin-right: 3%;
-     border-radius: 25pt;
-}
-
-.Tag:hover {
-     background-color: #D65A31;
-     color: #EEEEEE;
-}
-
 @media screen and (min-width: 601px) {
-     .Article {
+     .article {
           margin-top: 150px;
           margin-left: 25%;
           margin-right: 25%;
      }
       
-     .ArticleTitle {
+     .articletitle {
           font-size: 45pt;
           margin-top: 5%;
      }
       
-     .ArticleInfo {
+     .articleinfo {
           font-size: 12pt;
      }
       
-     .ArticleAuthorPicture {
+     .articleauthorpicture {
           width: 50px;
      }
 
-     .Content h2 {
+     .content h2 {
           font-size: 26pt;
      }
 
-     .Content h3 {
+     .content h3 {
           font-size: 22pt;
      }
      
-     .Content p {
+     .content p, .content table {
           font-size: 18pt;
      }
 
-     .Content li {
+     .content li {
           font-size: 16pt;
      }
 
-     .Content .Picture {
-          width: 100%;
-          text-align: center;
-     }
-
-     .Content greetings {
+     .content greetings {
           font-size: 28pt;
      }
-
-     .Content table {
-          font-size: 18pt;
-     }
      
-     .Tags {
+     .tags {
           margin-bottom: 8%;
           display: block;
           direction: rtl;
      }
 
-     .Tag {
+     .tag {
           font-size: 14pt;
           padding: 10pt;
      }
 }
 
 @media screen and (max-width: 600px) {
-     .Article {
+     .article {
           margin-top: 110px;
           margin-left: 15%;
           margin-right: 15%;
      }
       
-     .ArticleTitle {
+     .articletitle {
           font-size: 20pt;
           margin-top: 5%;
      }
       
-     .ArticleInfo {
+     .articleinfo {
           font-size: 10pt;
      }
       
-     .ArticleAuthorPicture {
+     .articleauthorpicture {
           width: 25px;
      }
       
-     .Content h2 {
+     .content h2 {
           font-size: 16pt;
      }
 
-     .Content h3 {
+     .content h3 {
           font-size: 14pt;
      }
      
-     .Content p {
+     .content p {
           font-size: 12pt;
      }
 
-     .Content li {
+     .content li, .content table {
           font-size: 10pt;
      }
 
-     .Content .Picture {
-          width: 100%;
-          text-align: center;
-     }
-
-     .Content greetings {
+     .content greetings {
           font-size: 18pt;
      }
 
-     .Content table {
-          font-size: 10pt;
-     }
-
-     .Content img {
+     .content img {
           margin-top: 5%;
-          margin-bottom: 5%;
           border-radius: 5pt;
           max-width: 100%;
-          height: auto;
      }
  
-     .Tags {
+     .tags {
           margin-bottom: 10%;
           text-align: center;
      }
  
-     .Tag {
+     .tag {
           font-size: 8pt;
           padding: 6pt;
      }

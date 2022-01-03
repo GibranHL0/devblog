@@ -1,208 +1,139 @@
-body {
-    background-color: #EEEEEE;
-    color: #393E46;
-    margin: 0%;
-}
-
-a {
-    text-decoration: none;
-}
-
-.HomePage h2 {
-    font-family: 'Montserrat';
-}
-
-.HomePage p, .pagination {
-    font-family: 'Inconsolata';
-}
-
-.BlogBrand {
+.blogbrand, .tags, .pagination-container, .blogscarrusel, .bbdescription {
     text-align: center;
 }
 
-.BBAuthor {
-    font-weight: bolder;
-}
-
-.BBDescription {
+.bbdescription {
     font-style: italic;
 }
 
-.BlogsCarrusel {
+.blogscarrusel, .picture-holder, .info, .pagination-container {
     width: 100%;
 }
 
-.clickable {
+.clickable, .pagination a {
     color: #393E46;
 }
 
-.ArticleView {
+.articleview, .pagination {
     display: inline-block;
 }
 
-.ArticleView:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+.pagination a.active, .pagination a:hover:not(.active), .articleview:hover {
     border-radius: 5px 5px 0 0;
 }
 
-.Picture-holder {
-    width: 100%;
+.articleview:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+}
+
+.picture-holder {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
 }
 
-.Info {
+.info {
     display: inline-flex;
-    width: 100%;
     justify-content: center;
     height: auto;
     align-items: baseline;
 }
 
-.Title {
-    text-align: center;
-}
-
-.Author {
+.author {
     margin-right: 3%;
-}
-
-.Description {
-    text-align: justify;
-}
-
-.Tags {
-    text-align: center;
-}
-
-.Tag:hover {
-    background-color: #D65A31;
-    color: #EEEEEE;
-    border: none;
-}
-
-.Tag {
-    color: #393E46;
-    background-color: #EEEEEE;
-    border: solid;
-    border-color: #222831;
-    text-align: center;
-    cursor: pointer;
-    margin-right: 3%;
-    border-radius: 25pt;
 }
 
 .pagination-container {
-    width: 100%;
-    text-align: center;
     margin-top: 2%;
     margin-bottom: 5%;
 }
 
-.pagination {
-  display: inline-block;
-}
-
 .pagination a {
-  color: black;
   float: left;
   padding: 8px 16px;
-  text-decoration: none;
 }
 
 .pagination a.active {
   background-color: #D65A31;
   color: #EEEEEE;
-  border-radius: 5px;
 }
 
 .pagination a:hover:not(.active) {
   background-color: #ddd;
-  border-radius: 5px;
 }
 
 @media screen and (min-width: 601px) {
-    .HomePage {
+    .homepage {
         margin-top: 150px;
         margin-left: 4%;
         margin-right: 4%;
     }
 
-    .BlogBrand {
+    .blogbrand, .articleview {
         margin-bottom: 5%;
     }
 
-    .BBAuthor {
+    .bbauthor {
         font-size: 35pt;
     }
 
-    .BBDescription {
+    .bbdescription, .pagination {
         font-size: 14pt;
     }
 
-    .BlogsCarrusel {
-        text-align: center;
-    }
-
-    .ArticleView {
+    .articleview {
         width: 28%;
-        margin-bottom: 5%;
         margin-right: 2%;
         padding: 10px;
         border: 5px;
     }
 
-    .Picture-holder {
+    .picture-holder {
         height: 400px;
     }
 
-    .Title {
+    .title {
         font-size: 19pt;
     }
 
-    .Author {
+    .author {
         font-size: 13pt;
     }
 
-    .Date {
+    .date {
         font-size: 12pt;
     }
 
-    .Description {
+    .description {
         font-size: 16pt;
     }
 
-    .Tag {
+    .tag {
         font-size: 11pt;
         padding: 7pt;
-    }
-
-    .pagination {
-        font-size: 14pt;
     }
 }
 
 @media screen and (max-width: 600px) {
-    .HomePage {
+    .homepage {
         margin-top: 110px;
         margin-left: 5%;
         margin-right: 5%;
     }
 
-    .BlogBrand {
+    .blogbrand {
         margin-bottom: 12%;
     }
 
-    .BBAuthor {
+    .bbauthor {
         font-size: 20pt;
     }
 
-    .BBDescription {
-        font-size: 8pt;
+    .bbdescription, .pagination {
+        font-size: 10pt;
     }
 
-    .ArticleView {
+    .articleview {
         width: 100%;
         margin-bottom: 15%;
         border: 5px;
@@ -210,42 +141,37 @@ a {
         border-bottom: solid;
     }
 
-    .Picture-holder {
+    .picture-holder {
         height: 250px;
     }
 
-    .Info {
+    .info {
         margin-top: -4%;
         margin-bottom: -2%;
     }
 
-    .Title {
+    .title {
         font-size: 14pt;
     }
 
-    .Author {
+    .author {
         font-size: 10pt;
     }
 
-    .Date {
+    .date, .tag {
         font-size: 7pt;
     }
 
-    .Description {
+    .description {
         font-size: 11pt;
         margin-bottom: 7%;
     }
 
-    .Tags {
+    .tags {
         margin-bottom: 5%;
     }
 
-    .Tag {
-        font-size: 7pt;
+    .tag {
         padding: 4pt;
-    }
-
-    .pagination {
-        font-size: 10pt;
     }
 }

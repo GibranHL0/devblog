@@ -1,53 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Junior Dev Blog</title>
+    {{template "backbone"}}
     <link href="/static/css/about.css" rel="stylesheet">
-    <link href="/static/css/header.css" rel="stylesheet">
-    <link href="/static/css/footer.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
 </head>
 <body>
-    <div class="Header">
+    <div class="header">
         {{template "header"}}
     </div>
-    <div class="About">
-        <div class="About-row">
-            <div class="About-column">
-                <div class="About-right">
-                    <h2 class="Title">
+    <div class="about">
+        <div class="about-row">
+            <div class="about-column">
+                <div class="about-right">
+                    <h2 class="title">
                         Sharing my experiences as a Junior Dev.
                     </h2>
-                    <h3 class="Subtitle">
+                    <h3 class="subtitle">
                         Although it may change in a few years, hopefully.
                     </h3>
-                    <p class="Text">
+                    <p class="text">
                         I always received help from the tech community, and I 
                         believe the best way to give all back is to share my 
                         knowledge. My blog shares my experiences learning all 
                         the tools and technologies that excites me the most.
                     </p>
-                    <p class="Text">
+                    <p class="text">
                         I hope this blog helps you to solve a little bug or 
                         inspire you in some sort.
                     </p>
-                    <p class="Text">
+                    <p class="text">
                         Thanks everyone!
                     </p>
                 </div>
             </div>
-            <div class="About-column">
-                <div class="About-left">
-                    <img src="/static/pictures/gibranherrera.jpeg" class="Picture">
+            <div class="about-column">
+                <div class="about-left">
+                    <img class="picture" 
+                    src="/static/pictures/gibranherrera.jpeg">
                 </div>
             </div>
         </div>
     </div>
-    <div class="Footer">
+    <div class="footer">
         {{template "footer"}}
     </div>
 </body>

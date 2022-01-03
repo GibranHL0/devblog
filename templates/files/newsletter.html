@@ -1,47 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Junior Dev Blog</title>
+    {{template "backbone"}}
     <link href="/static/css/newsletter.css" rel="stylesheet">
-    <link href="/static/css/header.css" rel="stylesheet">
-    <link href="/static/css/footer.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
 </head>
 <body>
-    <div class="Header">
+    <div class="header">
         {{template "header"}}
     </div>
-    <div class="Newsletter">
+    <div class="newsletter">
         {{if .Success}}
-        <div class="News-container">
-            <h1 class="Title">🎉 Thanks for Subscribing 🎉</h1>
+        <div class="news-container">
+            <h1 class="title">🎉 Thanks for Subscribing 🎉</h1>
             <div class="thanks-container">
                 <img class="thanks-img" src="https://64.media.tumblr.com/d420af617681d824a64322d7aaccbeed/tumblr_psdx6nZVou1s4xk33o1_500.gif">
             </div>
         </div>
         {{else}}
-        <div class="News-container">
+        <div class="news-container">
             <form method="POST">
-              <h1 class="Title">Join Junior Dev Newsletter</h1>
-              <p class="Description">Get the latest of my dev journey, and hopefully leave the Junior steps soon.</p>
-              <div class="Email-box">
-                <span class="Email-icon">
+              <h1 class="title">Join Junior Dev Newsletter</h1>
+              <p class="description">Get the latest of my dev journey, and hopefully leave the Junior steps soon.</p>
+              <div class="email-box">
+                <span class="email-icon">
                     <i class="fas fa-envelope"></i>
                 </span>
-                <input class="Tbox" type="email" name="email" placeholder="Enter your email">
-                <button class="Btn" type="submit" name="button">Subscribe</button>
+                <input class="tbox" type="email" name="email" placeholder="Enter your email">
+                <button class="btn" type="submit" name="button">Subscribe</button>
               </div>
-              <p class="Disclosure">Promise to not spam you!</p>
+              <p class="disclosure">Promise to not spam you!</p>
             </form>
         </div>
         {{end}}  
     </div>
-    <div class="Footer">
+    <div class="footer">
         {{template "footer"}}
     </div>
 </body>

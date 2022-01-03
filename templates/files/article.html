@@ -1,29 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Junior Dev Blog</title>
+    {{template "backbone"}}
     <link href="/static/css/article.css" rel="stylesheet">
     <link href="/static/css/gist.css" rel="stylesheet">
-    <link href="/static/css/header.css" rel="stylesheet">
-    <link href="/static/css/footer.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
 </head>
 <body>
-    <div class="Header">
+    <div class="header">
         {{template "header"}}
     </div>
-    <div class="Article">
-        <div class="TitleSection">
-            <h1 class="ArticleTitle">
+    <div class="article">
+        <div class="titlesection">
+            <h1 class="articletitle">
                 {{.Title}}
             </h1>
-            <div class="ArticleInfo">
-                <img class="ArticleAuthorPicture" src="/static/pictures/gibranherrera.jpeg">
-                <p class="ArticleAuthor">
+            <div class="articleinfo">
+                <img class="articleauthorpicture" src="/static/pictures/gibranherrera.jpeg">
+                <p class="articleauthor">
                     {{.Author}}
                 </p>
                 <p>
@@ -31,18 +24,18 @@
                 </p>
             </div>
         </div>
-        <div class="Content">
+        <div class="content">
             {{.Content}}
         </div>
-        <div class="Tags">
+        <div class="tags">
             {{range .Tags}}
-                <a href="#Tag">
-                    <button class="Tag">{{.}}</button>
+                <a href="#tag">
+                    <button class="tag">{{.}}</button>
                 </a>
             {{end}}
         </div>
     </div>
-    <div class="Footer">
+    <div class="footer">
         {{template "footer"}}
     </div>
 </body>

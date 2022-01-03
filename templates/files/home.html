@@ -1,52 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Junior Dev Blog</title>
+    {{template "backbone"}}
     <link href="/static/css/home.css" rel="stylesheet">
-    <link href="/static/css/header.css" rel="stylesheet">
-    <link href="/static/css/footer.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
 </head>
 <body>
-    <div class="Header">
+    <div class="header">
         {{template "header"}}
     </div>
-    <div class="HomePage">
-        <div class="BlogBrand">
-            <h2 class="BBAuthor">
+    <div class="homepage">
+        <div class="blogbrand">
+            <h2 class="bbauthor">
                 Gibran Herrera's Blog
             </h2>
-            <p class="BBDescription">
+            <p class="bbdescription">
                 Latest updates of my dev journey 🌱
             </p>
         </div>
-        <div class="BlogsCarrusel">
+        <div class="blogscarrusel">
             {{range .Articles}}
             <a class="clickable" href="http://localhost:8000/article?id={{.Id}}">
-                <div class="ArticleView">
-                    <div class="Picture-holder" style="background-image: url({{.Picture}});"></div>                
-                    <h2 class="Title">
+                <div class="articleview">
+                    <div class="picture-holder" style="background-image: url({{.Picture}});"></div>                
+                    <h2 class="title">
                         {{.Title}}
                     </h2>
-                    <div class="Info">
-                        <p class="Author">
+                    <div class="info">
+                        <p class="author">
                             {{.Author}}
                         </p>
-                        <p class="Date">
+                        <p class="date">
                             {{.Date.Format "2006 Jan 02"}}
                         </p>
                     </div>
-                    <p class="Description">
+                    <p class="description">
                         {{.Description}}
                     </p>
-                    <div class="Tags">
+                    <div class="tags">
                         {{range .Tags}}
                         <a href="#">
-                            <button class="Tag">{{.}}</button>
+                            <button class="tag">{{.}}</button>
                         </a>
                         {{end}}
                     </div>
@@ -73,7 +66,7 @@
             {{end}}
         </div>
     </div>
-    <div class="Footer">
+    <div class="footer">
         {{template "footer"}}
     </div>
 </body>
