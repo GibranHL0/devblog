@@ -31,6 +31,13 @@ body {
     border-radius: 15pt;
 }
 
+.Footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
 @media screen and (min-width: 601px) {
     .About {
         margin-top: 156px;
@@ -63,6 +70,11 @@ body {
         font-size: 20pt;
         margin-bottom: 6%;
     }
+
+    .About-left {
+        margin-top: 10%;
+        margin-left: 10%;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -83,7 +95,11 @@ body {
     }
 
     .Text {
-        font-size: 14pt;
+        font-size: 12pt;
         margin-bottom: 8%;
+    }
+
+    .About-left {
+        margin-bottom: 15%;
     }
 }
