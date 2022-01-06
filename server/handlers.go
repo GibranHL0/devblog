@@ -46,11 +46,16 @@ func newsletterHandler(templates *template.Template, db *connection.Database) ht
 
 func homeHandler(templates *template.Template, db *connection.Database) http.HandlerFunc {
 	return func(rw http.ResponseWriter, r *http.Request) {
+		if r.URL.Path != "/" {
+			executeNotFound(rw, templates)
+			return
+		}
+
 		pagenumber := getPageNumber(r.URL.Query().Get("page"))
 		mr := repository.MongoRepository{Db: db}
 		totalarticles, err := services.CountArticles(mr)
 		if err != nil {
-			executeNotFound(rw)
+			executeNotFound(rw, templates)
 			return
 		}
 		maxpages := getMaxPages(totalarticles)
@@ -60,7 +65,7 @@ func homeHandler(templates *template.Template, db *connection.Database) http.Han
 
 		err = services.GetArticlesView(mr, &articles, skip, 9)
 		if err != nil {
-			executeNotFound(rw)
+			executeNotFound(rw, templates)
 			return
 		}
 
@@ -75,7 +80,7 @@ func articleHandler(templates *template.Template, db *connection.Database) http.
 
 		articleId := r.URL.Query().Get("id")
 		if articleId == "" {
-			executeNotFound(rw)
+			executeNotFound(rw, templates)
 			return
 		}
 
@@ -84,7 +89,7 @@ func articleHandler(templates *template.Template, db *connection.Database) http.
 
 		err := services.GetArticle(articleId, mr, &article)
 		if err != nil {
-			executeNotFound(rw)
+			executeNotFound(rw, templates)
 			return
 		}
 
