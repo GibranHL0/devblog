@@ -1,0 +1,50 @@
+.error-space {
+    width: 100%;
+}
+
+.picture-container {
+    width: 100%;
+    text-align: center;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+@media screen and (min-width: 601px) {
+    .error-space {
+        margin-top: 156px;
+    }
+
+    .picture-container {
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+
+    .picture {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .error-space {
+        margin-top: 70px;
+    }
+
+    .title {
+        margin-top: 40%;
+        font-size: larger;
+    }
+
+    .picture-container {
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+
+    .picture {
+        width: 200px;
+    }
+}
