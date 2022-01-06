@@ -11,11 +11,11 @@ import (
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
-type MongoRepository struct {
+type mongorepository struct {
 	Db *connection.Database
 }
 
-func (mr *MongoRepository) GetArticle(id primitive.ObjectID) (
+func (mr *mongorepository) GetArticle(id primitive.ObjectID) (
 	*mongo.SingleResult, error) {
 
 	filter := bson.M{"_id": id}
@@ -31,7 +31,7 @@ func (mr *MongoRepository) GetArticle(id primitive.ObjectID) (
 	return result, nil
 }
 
-func (mr *MongoRepository) GetArticlesView(skip int64, limit int64) (
+func (mr *mongorepository) GetArticlesView(skip int64, limit int64) (
 	*mongo.Cursor, error) {
 
 	filter := bson.M{}
@@ -59,7 +59,7 @@ func (mr *MongoRepository) GetArticlesView(skip int64, limit int64) (
 	return cursor, nil
 }
 
-func (mr *MongoRepository) CountArticles() (articles int64, err error) {
+func (mr *mongorepository) CountArticles() (articles int64, err error) {
 	ctx, cancel := context.WithTimeout(context.Background(), mr.Db.Timing)
 	defer cancel()
 
@@ -71,7 +71,7 @@ func (mr *MongoRepository) CountArticles() (articles int64, err error) {
 	return articles, nil
 }
 
-func (mr *MongoRepository) CreateSub(sub models.Subscriber) (
+func (mr *mongorepository) CreateSub(sub models.Subscriber) (
 	*mongo.InsertOneResult, error) {
 	subCollection := mr.Db.Collection.Database().Collection("subscribers")
 

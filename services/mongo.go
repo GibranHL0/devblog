@@ -5,6 +5,7 @@ import (
 	"errors"
 	"fmt"
 
+	"github.com/GibranHL0/devblog/connection"
 	"github.com/GibranHL0/devblog/errorhandler"
 	"github.com/GibranHL0/devblog/models"
 	"github.com/GibranHL0/devblog/repository"
@@ -13,7 +14,7 @@ import (
 
 func GetArticle(
 	id string, 
-	mr repository.MongoRepository, 
+	db *connection.Database, 
 	article *models.Article) error {
 	
 	// Create the ObjectId for the Mongo DB
@@ -21,6 +22,8 @@ func GetArticle(
 	if err != nil {
 		return err
 	}
+
+	mr := repository.BuildMongo(db)
 
 	// Obtain the result from the database
 	result, err := mr.GetArticle(objectId)
@@ -36,10 +39,12 @@ func GetArticle(
 }
 
 func GetArticlesView(
-	mr repository.MongoRepository,
+	db *connection.Database,
 	articles *[]models.ArticleView,
 	skip int64,
 	limit int64) error {
+
+	mr := repository.BuildMongo(db)
 	
 	// Create a context with the timing in the configuration
 	ctx, cancel := context.WithTimeout(context.Background(), mr.Db.Timing)
@@ -59,7 +64,9 @@ func GetArticlesView(
 	return cursor.All(ctx, articles)
 }
 
-func CountArticles(mr repository.MongoRepository) (int64, error) {
+func CountArticles(db *connection.Database) (int64, error) {
+	mr := repository.BuildMongo(db)
+
 	articles, err := mr.CountArticles()
 	if err != nil {
 		errorhandler.ReportError(err, "services: Couldn't count home articles")
@@ -69,7 +76,9 @@ func CountArticles(mr repository.MongoRepository) (int64, error) {
 	return articles, nil
 }
 
-func CreateSub(mr repository.MongoRepository, sub models.Subscriber) (error) {
+func CreateSub(db *connection.Database ,sub models.Subscriber) (error) {
+	mr := repository.BuildMongo(db)
+
 	result, err := mr.CreateSub(sub)
 	if err != nil {
 		return err

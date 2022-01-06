@@ -7,7 +7,6 @@ import (
 
 	"github.com/GibranHL0/devblog/connection"
 	"github.com/GibranHL0/devblog/models"
-	"github.com/GibranHL0/devblog/repository"
 	"github.com/GibranHL0/devblog/services"
 )
 
@@ -36,9 +35,7 @@ func newsletterHandler(templates *template.Template, db *connection.Database) ht
 			Enable: true,
 		}
 
-		mr := repository.MongoRepository{Db: db}
-
-		services.CreateSub(mr, subscriber)
+		services.CreateSub(db, subscriber)
 
 		executeTemplate(templates, "newsletter.html", struct{ Success bool }{true}, rw)
 	}
@@ -52,8 +49,7 @@ func homeHandler(templates *template.Template, db *connection.Database) http.Han
 		}
 
 		pagenumber := getPageNumber(r.URL.Query().Get("page"))
-		mr := repository.MongoRepository{Db: db}
-		totalarticles, err := services.CountArticles(mr)
+		totalarticles, err := services.CountArticles(db)
 		if err != nil {
 			executeNotFound(rw, templates)
 			return
@@ -63,7 +59,7 @@ func homeHandler(templates *template.Template, db *connection.Database) http.Han
 		skip := calculateSkip(pagenumber)
 		articles := make([]models.ArticleView, 0)
 
-		err = services.GetArticlesView(mr, &articles, skip, 9)
+		err = services.GetArticlesView(db, &articles, skip, 9)
 		if err != nil {
 			executeNotFound(rw, templates)
 			return
@@ -85,9 +81,8 @@ func articleHandler(templates *template.Template, db *connection.Database) http.
 		}
 
 		article := models.Article{}
-		mr := repository.MongoRepository{Db: db}
 
-		err := services.GetArticle(articleId, mr, &article)
+		err := services.GetArticle(articleId, db, &article)
 		if err != nil {
 			executeNotFound(rw, templates)
 			return
