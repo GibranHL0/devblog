@@ -26,9 +26,9 @@ func executeTemplate(
 	}
 }
 
-func executeNotFound(rw http.ResponseWriter) {
+func executeNotFound(rw http.ResponseWriter, templates *template.Template) {
 	rw.WriteHeader(http.StatusNotFound)
-	rw.Write([]byte("Content not found!, 404"))
+	executeTemplate(templates, "404.html", nil, rw)
 }
 
 func getPageNumber(page string) (pagenumber int64) {
