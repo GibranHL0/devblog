@@ -4,7 +4,7 @@
 
 .news-container{
     padding: 50px 40px;
-    color: #393E46;
+    color: var(--fourth-color);
 }
 
 .news-container p {
@@ -19,7 +19,7 @@
 }
 
 .email-box i, .btn{
-    background: #393E46;
+    background: var(--fourth-color);
 }
 
 .tbox,.btn{
@@ -34,7 +34,7 @@
 }
 
 .btn:hover {
-    background: #D65A31;
+    background: var(--second-color);
 }
 
 .lownav {

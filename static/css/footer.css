@@ -1,6 +1,6 @@
 .lownav {
     font-family: 'Montserrat';
-    background-color: #222831;
+    background-color: var(--fourth-color);
     color: #EEEEEE;
     bottom: 0;
     left: 0;

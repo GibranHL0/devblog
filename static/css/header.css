@@ -3,7 +3,7 @@
 }
 
 .topnav {
-     background-color: #D65A31;
+     background-color: var(--primary-color);
      width: 100%;
      justify-content: center;
      position: absolute;

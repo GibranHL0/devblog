@@ -54,7 +54,7 @@
 }
 
 .pagination a.active {
-  background-color: #D65A31;
+  background-color: var(--second-color);
   color: #EEEEEE;
 }
 

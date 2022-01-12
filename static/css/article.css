@@ -54,7 +54,7 @@
      text-decoration: underline;
      padding: 3px;
      font-weight: bold;
-     background-color: #D65A31;
+     background-color: #8E05C2;
      color: #EEEEEE;
 }
 
@@ -70,7 +70,7 @@
 }
 
 .content li::before {
-     content: '🔥';
+     content: '👾';
      margin-left: -30px;
      margin-right: 10px;
 }
@@ -94,7 +94,7 @@
 }
 
 .content table thead tr {
-     background-color: #D65A31;
+     background-color: var(--second-color);
      color: #EEEEEE;
 }
 
@@ -107,12 +107,12 @@
 }
 
 .content tbody tr:last-of-type {
-     border-bottom: 2px solid #D65A31;
+     border-bottom: 2px solid var(--second-color);
 }
 
 .content tbody tr.active-row {
      font-weight: bold;
-     color: #D65A31;
+     color: var(--second-color);
 }
 
 .content .farewell {

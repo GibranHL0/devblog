@@ -4,7 +4,7 @@
 }
 
 .highlight {
-    background-color: #D65A31;
+    background-color: #8E05C2;
     color: #EEEEEE;
     padding: 2px;
 }
@@ -19,7 +19,7 @@
 }
 
 .icon-row a:hover .icon {
-    color: #D65A31;
+    color: var(--second-color);
 }
 
 .icon {

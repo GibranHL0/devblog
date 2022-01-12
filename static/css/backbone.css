@@ -1,3 +1,10 @@
+:root {
+    --primary-color: #3E065F;
+    --second-color: #700B97;
+    --third-color: #8E05C2;
+    --fourth-color: #000000;
+}
+
 body {
     background-color: #EEEEEE;
     color: #393E46;
@@ -31,7 +38,7 @@ a {
 }
 
 .tag:hover {
-    background-color: #D65A31;
+    background-color: var(--second-color);
     color: #EEEEEE;
     border: none;
 }
