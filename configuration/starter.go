@@ -19,6 +19,7 @@ type Configuration struct {
 	FileServerPath string
 	TemplatesPath  string
 	Port           string
+	Url            string
 }
 
 func getEnv(env string) string {
@@ -49,6 +50,7 @@ func Get(envFilePath string) *Configuration {
 	fileServerPath := getEnv("FILESERVER")
 	templatesPath := getEnv("TEMPLATESPATH")
 	port := getEnv("PORT")
+	url := getEnv("URL")
 
 	return &Configuration{
 		Uri:            uri,
@@ -59,5 +61,6 @@ func Get(envFilePath string) *Configuration {
 		FileServerPath: fileServerPath,
 		TemplatesPath:  templatesPath,
 		Port:           port,
+		Url:            url,
 	}
 }

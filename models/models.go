@@ -30,6 +30,7 @@ type HomePage struct {
 	Older     int64
 	Newer     int64
 	Pages     []int64
+	Url       string
 }
 
 type Subscriber struct {

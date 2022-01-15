@@ -3,6 +3,8 @@
 <head>
     {{template "backbone"}}
     <link href="/static/css/home.css" rel="stylesheet">
+    {{$current := .Current}}
+    {{$url := .Url}}
 </head>
 <body>
     <div class="header">
@@ -19,7 +21,7 @@
         </div>
         <div class="blogscarrusel">
             {{range .Articles}}
-            <a class="clickable" href="http://localhost:8000/article?id={{.Id}}">
+            <a class="clickable" href="{{$url}}article?id={{.Id}}">
                 <div class="articleview">
                     <div class="picture-holder" style="background-image: url({{.Picture}});"></div>                
                     <h2 class="title">
@@ -51,18 +53,17 @@
     <div class="pagination-container">
         <div class="pagination">
             {{if .HasBefore}}
-                <a href="http://localhost:8000/?page={{.Newer}}">Newer</a>
+                <a href="{{$url}}?page={{.Newer}}">Newer</a>
             {{end}}
-            {{$current := .Current}}
             {{range .Pages}}
                 {{if eq . $current}}
-                    <a class="active" href="http://localhost:8000/?page={{.}}">{{.}}</a>
+                    <a class="active" href="{{$url}}?page={{.}}">{{.}}</a>
                 {{else}}
-                    <a href="http://localhost:8000/?page={{.}}">{{.}}</a>
+                    <a href="{{$url}}?page={{.}}">{{.}}</a>
                 {{end}}
             {{end}}
             {{if .HasNext}}
-                <a href="http://localhost:8000/?page={{.Older}}">Older</a>
+                <a href="{{$url}}?page={{.Older}}">Older</a>
             {{end}}
         </div>
     </div>

@@ -1,6 +1,6 @@
 package models
 
-func GetHomePage(articles []ArticleView, pagenumber int64, maxpages int64) HomePage {
+func GetHomePage(articles []ArticleView, pagenumber int64, maxpages int64, url string) HomePage {
 	var hasbefore, hasnext bool
 
 	if (pagenumber - 1) >= 1 {
@@ -28,13 +28,14 @@ func GetHomePage(articles []ArticleView, pagenumber int64, maxpages int64) HomeP
 	}
 
 	home := HomePage{
-		Articles: articles,
+		Articles:  articles,
 		HasBefore: hasbefore,
-		HasNext: hasnext,
-		Older: pagenumber + 1,
-		Newer: pagenumber - 1,
-		Current: pagenumber,
-		Pages: pages,
+		HasNext:   hasnext,
+		Older:     pagenumber + 1,
+		Newer:     pagenumber - 1,
+		Current:   pagenumber,
+		Pages:     pages,
+		Url:       url,
 	}
 	return home
 }

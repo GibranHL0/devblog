@@ -18,7 +18,7 @@ func initializeHandlers(
 	fileServer := createFileServer(config.FileServerPath)
 
 	mux.Handle("/static/", http.StripPrefix("/static", fileServer))
-	mux.HandleFunc("/", homeHandler(templates, db))
+	mux.HandleFunc("/", homeHandler(templates, db, config.Url))
 	mux.HandleFunc("/article", articleHandler(templates, db))
 	mux.HandleFunc("/about", aboutHandler(templates))
 	mux.HandleFunc("/contact", contactHandler(templates))

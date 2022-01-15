@@ -41,7 +41,7 @@ func newsletterHandler(templates *template.Template, db *connection.Database) ht
 	}
 }
 
-func homeHandler(templates *template.Template, db *connection.Database) http.HandlerFunc {
+func homeHandler(templates *template.Template, db *connection.Database, url string) http.HandlerFunc {
 	return func(rw http.ResponseWriter, r *http.Request) {
 		if r.URL.Path != "/" {
 			executeNotFound(rw, templates)
@@ -65,7 +65,7 @@ func homeHandler(templates *template.Template, db *connection.Database) http.Han
 			return
 		}
 
-		homepage := models.GetHomePage(articles, pagenumber, maxpages)
+		homepage := models.GetHomePage(articles, pagenumber, maxpages, url)
 
 		executeTemplate(templates, "home.html", homepage, rw)
 	}
