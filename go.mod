@@ -1,5 +1,6 @@
 module github.com/GibranHL0/devblog
 
+// +heroku goVersion go1.17.6
 go 1.17
 
 require (
