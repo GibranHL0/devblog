@@ -15,7 +15,7 @@ import (
 var blog app.App
 
 func init() {
-	config := configuration.Get(".env")
+	config := configuration.Get()
 	log.Println("Configuration generated: ", config.Database)
 
 	db := connection.StartMongo(config)

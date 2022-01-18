@@ -7,7 +7,6 @@ import (
 	"time"
 
 	"github.com/GibranHL0/devblog/errorhandler"
-	"github.com/joho/godotenv"
 )
 
 type Configuration struct {
@@ -34,10 +33,7 @@ func getEnv(env string) string {
 	return result
 }
 
-func Get(envFilePath string) *Configuration {
-	err := godotenv.Load(envFilePath)
-	errorhandler.CheckFatal(err)
-
+func Get() *Configuration {
 	size, err := strconv.ParseUint(getEnv("POOLSIZE"), 10, 32)
 	errorhandler.CheckFatal(err)
 
