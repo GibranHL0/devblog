@@ -45,7 +45,7 @@ func Get() *Configuration {
 	collection := getEnv("COLLECTION")
 	fileServerPath := getEnv("FILESERVER")
 	templatesPath := getEnv("TEMPLATESPATH")
-	port := getEnv("PORT")
+	port := ":" + getEnv("PORT")
 	url := getEnv("URL")
 
 	return &Configuration{
