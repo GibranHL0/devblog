@@ -5,11 +5,13 @@ import (
 )
 
 type Article struct {
-	Title   string    `bson:"title"`
-	Author  string    `bson:"author"`
-	Date    time.Time `bson:"date"`
-	Tags    []string  `bson:"tags"`
-	Content string    `bson:"article"`
+	Title       string    `bson:"title"`
+	Author      string    `bson:"author"`
+	Date        time.Time `bson:"date"`
+	Tags        []string  `bson:"tags"`
+	Content     string    `bson:"article"`
+	Description string    `bson:"description"`
+	Picture     string    `bson:"picture"`
 }
 
 type ArticleView struct {
