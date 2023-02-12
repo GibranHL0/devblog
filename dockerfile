@@ -2,8 +2,8 @@ FROM golang:1.20.0-alpine
 
 WORKDIR /app
 
-LABEL version="0.4"
-LABEL maintener="gibran.devops@gmail.com"
+LABEL version="0.5"
+LABEL maintainer="gibran.devops@gmail.com"
 
 COPY . .
 
