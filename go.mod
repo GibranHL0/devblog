@@ -4,7 +4,7 @@ module github.com/GibranHL0/devblog
 go 1.17
 
 require (
-	github.com/joho/godotenv v1.4.0
+	github.com/joho/godotenv v1.5.1
 	go.mongodb.org/mongo-driver v1.8.2
 )
 
